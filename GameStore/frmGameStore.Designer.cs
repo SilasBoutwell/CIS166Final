@@ -49,6 +49,7 @@
             this.btnExit.TabIndex = 1;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnAdd
             // 
@@ -58,6 +59,7 @@
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add Game";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // frmGameStore
             // 
@@ -68,7 +70,7 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.rchGameInventory);
             this.Name = "frmGameStore";
-            this.Text = "48 BIts Game Store";
+            this.Text = "Infinite Bits Game Store";
             this.ResumeLayout(false);
 
         }

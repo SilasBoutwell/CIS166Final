@@ -16,5 +16,17 @@ namespace GameStore
         {
             InitializeComponent();
         }
+
+        //Event handler to add a game
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Closes the form
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
