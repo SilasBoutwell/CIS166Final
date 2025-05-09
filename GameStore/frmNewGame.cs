@@ -35,35 +35,45 @@ namespace GameStore
         //Method to data validation
         private bool isValid()
         {
-            if (String.IsNullOrWhiteSpace(txbTitle.Text))
+            if (String.IsNullOrWhiteSpace(txtTitle.Text))
             {
                 MessageBox.Show("Please enter the game title", "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
-            else if (String.IsNullOrWhiteSpace(txbDeveloper.Text))
+            else if (String.IsNullOrWhiteSpace(txtDeveloper.Text))
             {
                 MessageBox.Show("Please enter the developer name", "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
-            else if (String.IsNullOrWhiteSpace(txbPublisher.Text))
+            else if (String.IsNullOrWhiteSpace(txtPublisher.Text))
             {
                 MessageBox.Show("Please enter the publisher name", "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
-            //else if()
+            else if (String.IsNullOrWhiteSpace(txtGenre.Text))
+            {
+                MessageBox.Show("Please enter the publisher name", "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
 
-            else if (String.IsNullOrWhiteSpace(txbPlatform.Text))
+            else if (String.IsNullOrWhiteSpace(txtPlatform.Text))
             {
                 MessageBox.Show("Please enter the platform name", "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
-            else if (cmbRegion.SelectedIndex == 0)
+            else if (cboRegion.SelectedIndex == 0)
             {
                 MessageBox.Show("Please select a valid region option", "Selection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            else if (String.IsNullOrWhiteSpace(txtPrice.Text))
+            {
+                MessageBox.Show("Please enter the publisher name", "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 

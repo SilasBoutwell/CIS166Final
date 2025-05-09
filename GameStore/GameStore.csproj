@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmDeleteGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeleteGame.Designer.cs">
+      <DependentUpon>frmDeleteGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNewGame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,8 +64,12 @@
     <Compile Include="frmGameStore.Designer.cs">
       <DependentUpon>frmGameStore.cs</DependentUpon>
     </Compile>
+    <Compile Include="Game.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmDeleteGame.resx">
+      <DependentUpon>frmDeleteGame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGameStore.resx">
       <DependentUpon>frmGameStore.cs</DependentUpon>
     </EmbeddedResource>

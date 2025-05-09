@@ -24,6 +24,21 @@ namespace GameStore
             addGame.ShowDialog();
         }
 
+        // Event handler to delete game 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Form deteleGame = new frmDeleteGame();
+            deteleGame.ShowDialog();
+        }
+
+        //Event handler to view all games and clear filters
+        private void btnViewAll_Click(object sender, EventArgs e)
+        {
+            //
+            //Code to clear the filters in here
+            //
+        }
+
         //Closes the form
         private void btnExit_Click(object sender, EventArgs e)
         {

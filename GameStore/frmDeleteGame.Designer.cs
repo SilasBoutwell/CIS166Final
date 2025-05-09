@@ -1,6 +1,6 @@
 ﻿namespace GameStore
 {
-    partial class frmNewGame
+    partial class frmDeleteGame
     {
         /// <summary>
         /// Required designer variable.
@@ -48,18 +48,18 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(127, 200);
+            this.txtPrice.Location = new System.Drawing.Point(122, 211);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(162, 22);
-            this.txtPrice.TabIndex = 47;
+            this.txtPrice.TabIndex = 31;
             // 
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(33, 203);
+            this.lblPrice.Location = new System.Drawing.Point(28, 214);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(41, 16);
-            this.lblPrice.TabIndex = 46;
+            this.lblPrice.TabIndex = 30;
             this.lblPrice.Text = "Price:";
             // 
             // cboRegion
@@ -71,123 +71,123 @@
             "Europe",
             "Japan",
             "Korea"});
-            this.cboRegion.Location = new System.Drawing.Point(127, 170);
+            this.cboRegion.Location = new System.Drawing.Point(122, 181);
             this.cboRegion.Name = "cboRegion";
             this.cboRegion.Size = new System.Drawing.Size(162, 24);
-            this.cboRegion.TabIndex = 45;
+            this.cboRegion.TabIndex = 29;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 173);
+            this.label1.Location = new System.Drawing.Point(28, 184);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 16);
-            this.label1.TabIndex = 44;
+            this.label1.TabIndex = 28;
             this.label1.Text = "Region:";
             // 
             // txtPlatform
             // 
-            this.txtPlatform.Location = new System.Drawing.Point(127, 142);
+            this.txtPlatform.Location = new System.Drawing.Point(122, 153);
             this.txtPlatform.Name = "txtPlatform";
             this.txtPlatform.Size = new System.Drawing.Size(162, 22);
-            this.txtPlatform.TabIndex = 43;
+            this.txtPlatform.TabIndex = 27;
             // 
             // lblPlatform
             // 
             this.lblPlatform.AutoSize = true;
-            this.lblPlatform.Location = new System.Drawing.Point(33, 145);
+            this.lblPlatform.Location = new System.Drawing.Point(28, 156);
             this.lblPlatform.Name = "lblPlatform";
             this.lblPlatform.Size = new System.Drawing.Size(59, 16);
-            this.lblPlatform.TabIndex = 42;
+            this.lblPlatform.TabIndex = 26;
             this.lblPlatform.Text = "Platform:";
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(214, 246);
+            this.btnExit.Location = new System.Drawing.Point(209, 257);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 41;
+            this.btnExit.TabIndex = 25;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(114, 246);
+            this.btnAdd.Location = new System.Drawing.Point(109, 257);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 40;
+            this.btnAdd.TabIndex = 24;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
             // txtGenre
             // 
-            this.txtGenre.Location = new System.Drawing.Point(127, 114);
+            this.txtGenre.Location = new System.Drawing.Point(122, 125);
             this.txtGenre.Name = "txtGenre";
             this.txtGenre.Size = new System.Drawing.Size(162, 22);
-            this.txtGenre.TabIndex = 39;
+            this.txtGenre.TabIndex = 23;
             // 
             // txtPublisher
             // 
-            this.txtPublisher.Location = new System.Drawing.Point(127, 87);
+            this.txtPublisher.Location = new System.Drawing.Point(122, 98);
             this.txtPublisher.Name = "txtPublisher";
             this.txtPublisher.Size = new System.Drawing.Size(162, 22);
-            this.txtPublisher.TabIndex = 38;
+            this.txtPublisher.TabIndex = 22;
             // 
             // txtDeveloper
             // 
-            this.txtDeveloper.Location = new System.Drawing.Point(127, 59);
+            this.txtDeveloper.Location = new System.Drawing.Point(122, 70);
             this.txtDeveloper.Name = "txtDeveloper";
             this.txtDeveloper.Size = new System.Drawing.Size(162, 22);
-            this.txtDeveloper.TabIndex = 37;
+            this.txtDeveloper.TabIndex = 21;
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(127, 31);
+            this.txtTitle.Location = new System.Drawing.Point(122, 42);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(162, 22);
-            this.txtTitle.TabIndex = 36;
+            this.txtTitle.TabIndex = 20;
             // 
             // lblGenre
             // 
             this.lblGenre.AutoSize = true;
-            this.lblGenre.Location = new System.Drawing.Point(33, 117);
+            this.lblGenre.Location = new System.Drawing.Point(28, 128);
             this.lblGenre.Name = "lblGenre";
             this.lblGenre.Size = new System.Drawing.Size(47, 16);
-            this.lblGenre.TabIndex = 35;
+            this.lblGenre.TabIndex = 19;
             this.lblGenre.Text = "Genre:";
             // 
             // lblPublisher
             // 
             this.lblPublisher.AutoSize = true;
-            this.lblPublisher.Location = new System.Drawing.Point(33, 90);
+            this.lblPublisher.Location = new System.Drawing.Point(28, 101);
             this.lblPublisher.Name = "lblPublisher";
             this.lblPublisher.Size = new System.Drawing.Size(66, 16);
-            this.lblPublisher.TabIndex = 34;
+            this.lblPublisher.TabIndex = 18;
             this.lblPublisher.Text = "Publisher:";
             // 
             // lblDeveloper
             // 
             this.lblDeveloper.AutoSize = true;
-            this.lblDeveloper.Location = new System.Drawing.Point(33, 62);
+            this.lblDeveloper.Location = new System.Drawing.Point(28, 73);
             this.lblDeveloper.Name = "lblDeveloper";
             this.lblDeveloper.Size = new System.Drawing.Size(74, 16);
-            this.lblDeveloper.TabIndex = 33;
+            this.lblDeveloper.TabIndex = 17;
             this.lblDeveloper.Text = "Developer:";
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(33, 34);
+            this.lblTitle.Location = new System.Drawing.Point(28, 45);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(36, 16);
-            this.lblTitle.TabIndex = 32;
+            this.lblTitle.TabIndex = 16;
             this.lblTitle.Text = "Title:";
             // 
-            // frmNewGame
+            // frmDeleteGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(323, 300);
+            this.ClientSize = new System.Drawing.Size(335, 326);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.cboRegion);
@@ -204,8 +204,8 @@
             this.Controls.Add(this.lblPublisher);
             this.Controls.Add(this.lblDeveloper);
             this.Controls.Add(this.lblTitle);
-            this.Name = "frmNewGame";
-            this.Text = "Add Game";
+            this.Name = "frmDeleteGame";
+            this.Text = "frmDeleteGame";
             this.ResumeLayout(false);
             this.PerformLayout();
 
