@@ -32,14 +32,14 @@
             this.lblDeveloper = new System.Windows.Forms.Label();
             this.lblPublisher = new System.Windows.Forms.Label();
             this.lblGenre = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txbTitle = new System.Windows.Forms.TextBox();
+            this.txbDeveloper = new System.Windows.Forms.TextBox();
+            this.txbPublisher = new System.Windows.Forms.TextBox();
+            this.txbGenre = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.lblPlatform = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txbPlatform = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbRegion = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
@@ -80,33 +80,33 @@
             this.lblGenre.TabIndex = 3;
             this.lblGenre.Text = "Genre:";
             // 
-            // textBox1
+            // txbTitle
             // 
-            this.textBox1.Location = new System.Drawing.Point(117, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 22);
-            this.textBox1.TabIndex = 4;
+            this.txbTitle.Location = new System.Drawing.Point(117, 29);
+            this.txbTitle.Name = "txbTitle";
+            this.txbTitle.Size = new System.Drawing.Size(162, 22);
+            this.txbTitle.TabIndex = 4;
             // 
-            // textBox2
+            // txbDeveloper
             // 
-            this.textBox2.Location = new System.Drawing.Point(117, 57);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(162, 22);
-            this.textBox2.TabIndex = 5;
+            this.txbDeveloper.Location = new System.Drawing.Point(117, 57);
+            this.txbDeveloper.Name = "txbDeveloper";
+            this.txbDeveloper.Size = new System.Drawing.Size(162, 22);
+            this.txbDeveloper.TabIndex = 5;
             // 
-            // textBox3
+            // txbPublisher
             // 
-            this.textBox3.Location = new System.Drawing.Point(117, 85);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(162, 22);
-            this.textBox3.TabIndex = 6;
+            this.txbPublisher.Location = new System.Drawing.Point(117, 85);
+            this.txbPublisher.Name = "txbPublisher";
+            this.txbPublisher.Size = new System.Drawing.Size(162, 22);
+            this.txbPublisher.TabIndex = 6;
             // 
-            // textBox4
+            // txbGenre
             // 
-            this.textBox4.Location = new System.Drawing.Point(117, 115);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(162, 22);
-            this.textBox4.TabIndex = 7;
+            this.txbGenre.Location = new System.Drawing.Point(117, 112);
+            this.txbGenre.Name = "txbGenre";
+            this.txbGenre.Size = new System.Drawing.Size(162, 22);
+            this.txbGenre.TabIndex = 7;
             // 
             // btnAdd
             // 
@@ -116,6 +116,7 @@
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnExit
             // 
@@ -125,27 +126,28 @@
             this.btnExit.TabIndex = 9;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lblPlatform
             // 
             this.lblPlatform.AutoSize = true;
-            this.lblPlatform.Location = new System.Drawing.Point(23, 146);
+            this.lblPlatform.Location = new System.Drawing.Point(23, 143);
             this.lblPlatform.Name = "lblPlatform";
             this.lblPlatform.Size = new System.Drawing.Size(59, 16);
             this.lblPlatform.TabIndex = 10;
             this.lblPlatform.Text = "Platform:";
             // 
-            // textBox5
+            // txbPlatform
             // 
-            this.textBox5.Location = new System.Drawing.Point(117, 143);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(162, 22);
-            this.textBox5.TabIndex = 11;
+            this.txbPlatform.Location = new System.Drawing.Point(117, 140);
+            this.txbPlatform.Name = "txbPlatform";
+            this.txbPlatform.Size = new System.Drawing.Size(162, 22);
+            this.txbPlatform.TabIndex = 11;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 177);
+            this.label1.Location = new System.Drawing.Point(23, 171);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 16);
             this.label1.TabIndex = 12;
@@ -160,7 +162,7 @@
             "Europe",
             "Japan",
             "Korea"});
-            this.cmbRegion.Location = new System.Drawing.Point(117, 174);
+            this.cmbRegion.Location = new System.Drawing.Point(117, 168);
             this.cmbRegion.Name = "cmbRegion";
             this.cmbRegion.Size = new System.Drawing.Size(162, 24);
             this.cmbRegion.TabIndex = 13;
@@ -172,14 +174,14 @@
             this.ClientSize = new System.Drawing.Size(352, 268);
             this.Controls.Add(this.cmbRegion);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txbPlatform);
             this.Controls.Add(this.lblPlatform);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbGenre);
+            this.Controls.Add(this.txbPublisher);
+            this.Controls.Add(this.txbDeveloper);
+            this.Controls.Add(this.txbTitle);
             this.Controls.Add(this.lblGenre);
             this.Controls.Add(this.lblPublisher);
             this.Controls.Add(this.lblDeveloper);
@@ -197,14 +199,14 @@
         private System.Windows.Forms.Label lblDeveloper;
         private System.Windows.Forms.Label lblPublisher;
         private System.Windows.Forms.Label lblGenre;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txbTitle;
+        private System.Windows.Forms.TextBox txbDeveloper;
+        private System.Windows.Forms.TextBox txbPublisher;
+        private System.Windows.Forms.TextBox txbGenre;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblPlatform;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txbPlatform;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbRegion;
     }

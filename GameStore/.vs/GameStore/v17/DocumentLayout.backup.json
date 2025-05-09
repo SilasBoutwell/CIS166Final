@@ -3,15 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\Jorge\\source\\repos\\CIS166Final\\GameStore\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|c:\\users\\jorge\\source\\repos\\cis166final\\gamestore\\frmnewgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:frmnewgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\Jorge\\source\\repos\\CIS166Final\\GameStore\\frmgamestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:frmgamestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|c:\\users\\jorge\\source\\repos\\cis166final\\gamestore\\frmnewgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:frmnewgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|c:\\users\\jorge\\source\\repos\\cis166final\\gamestore\\frmgamestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:frmgamestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|c:\\users\\jorge\\source\\repos\\cis166final\\gamestore\\frmgamestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\Jorge\\source\\repos\\CIS166Final\\GameStore\\frmgamestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:frmgamestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -31,10 +35,23 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmNewGame.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Jorge\\Source\\Repos\\CIS166Final\\GameStore\\frmNewGame.cs",
+              "Title": "frmNewGame.cs",
+              "DocumentMoniker": "C:\\Users\\Jorge\\source\\repos\\CIS166Final\\GameStore\\frmNewGame.cs",
               "RelativeDocumentMoniker": "frmNewGame.cs",
-              "ToolTip": "C:\\Users\\Jorge\\Source\\Repos\\CIS166Final\\GameStore\\frmNewGame.cs [Design]",
+              "ToolTip": "C:\\Users\\Jorge\\source\\repos\\CIS166Final\\GameStore\\frmNewGame.cs",
+              "RelativeToolTip": "frmNewGame.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwCgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T18:28:11.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmNewGame.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jorge\\source\\repos\\CIS166Final\\GameStore\\frmNewGame.cs",
+              "RelativeDocumentMoniker": "frmNewGame.cs",
+              "ToolTip": "C:\\Users\\Jorge\\source\\repos\\CIS166Final\\GameStore\\frmNewGame.cs [Design]",
               "RelativeToolTip": "frmNewGame.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-06T19:05:35.157Z",
@@ -48,14 +65,14 @@
               "RelativeDocumentMoniker": "frmGameStore.cs",
               "ToolTip": "C:\\Users\\Jorge\\source\\repos\\CIS166Final\\GameStore\\frmGameStore.cs",
               "RelativeToolTip": "frmGameStore.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAhwBcAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-06T19:02:01.757Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "frmGameStore.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Jorge\\source\\repos\\CIS166Final\\GameStore\\frmGameStore.cs",
               "RelativeDocumentMoniker": "frmGameStore.cs",

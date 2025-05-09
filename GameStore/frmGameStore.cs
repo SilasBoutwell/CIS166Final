@@ -20,7 +20,8 @@ namespace GameStore
         //Event handler to add a game
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            Form addGame = new frmNewGame();
+            addGame.ShowDialog();
         }
 
         //Closes the form
