@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameStore.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace GameStore
         public frmNewGame()
         {
             InitializeComponent();
+            cboRegion.SelectedIndex = 0;
         }
 
         //Event handler to add a game to the main form
@@ -22,7 +24,17 @@ namespace GameStore
         {
             if (isValid())
             {
+                Game game = new Game(
+                    txtTitle.Text,
+                    txtDeveloper.Text,
+                    txtPublisher.Text,
+                    txtGenre.Text,
+                    txtPlatform.Text,
+                    cboRegion.SelectedItem.ToString(),
+                    decimal.Parse(txtPrice.Text));
 
+                this.Tag = game.ToString();
+                this.DialogResult = DialogResult.OK;
             }
         }
 
@@ -65,7 +77,7 @@ namespace GameStore
                 return false;
             }
 
-            else if (cboRegion.SelectedIndex == 0)
+            else if (cboRegion.Text == "Select a Region")
             {
                 MessageBox.Show("Please select a valid region option", "Selection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -74,6 +86,18 @@ namespace GameStore
             else if (String.IsNullOrWhiteSpace(txtPrice.Text))
             {
                 MessageBox.Show("Please enter the publisher name", "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            else if (!decimal.TryParse(txtPrice.Text, out decimal price))
+            {
+                MessageBox.Show("Please enter a valid price", "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            else if (price < 0)
+            {
+                MessageBox.Show("Please enter a valid price", "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 

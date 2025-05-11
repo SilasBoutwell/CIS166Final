@@ -51,7 +51,7 @@
             this.txtPrice.Location = new System.Drawing.Point(127, 200);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(162, 22);
-            this.txtPrice.TabIndex = 47;
+            this.txtPrice.TabIndex = 6;
             // 
             // lblPrice
             // 
@@ -67,6 +67,7 @@
             this.cboRegion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboRegion.FormattingEnabled = true;
             this.cboRegion.Items.AddRange(new object[] {
+            "Select a Region",
             "North America",
             "Europe",
             "Japan",
@@ -74,7 +75,7 @@
             this.cboRegion.Location = new System.Drawing.Point(127, 170);
             this.cboRegion.Name = "cboRegion";
             this.cboRegion.Size = new System.Drawing.Size(162, 24);
-            this.cboRegion.TabIndex = 45;
+            this.cboRegion.TabIndex = 5;
             // 
             // label1
             // 
@@ -90,7 +91,7 @@
             this.txtPlatform.Location = new System.Drawing.Point(127, 142);
             this.txtPlatform.Name = "txtPlatform";
             this.txtPlatform.Size = new System.Drawing.Size(162, 22);
-            this.txtPlatform.TabIndex = 43;
+            this.txtPlatform.TabIndex = 4;
             // 
             // lblPlatform
             // 
@@ -103,49 +104,53 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(214, 246);
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnExit.Location = new System.Drawing.Point(200, 246);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 41;
+            this.btnExit.Size = new System.Drawing.Size(89, 28);
+            this.btnExit.TabIndex = 8;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(114, 246);
+            this.btnAdd.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnAdd.Location = new System.Drawing.Point(83, 246);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 40;
+            this.btnAdd.Size = new System.Drawing.Size(89, 28);
+            this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtGenre
             // 
             this.txtGenre.Location = new System.Drawing.Point(127, 114);
             this.txtGenre.Name = "txtGenre";
             this.txtGenre.Size = new System.Drawing.Size(162, 22);
-            this.txtGenre.TabIndex = 39;
+            this.txtGenre.TabIndex = 3;
             // 
             // txtPublisher
             // 
             this.txtPublisher.Location = new System.Drawing.Point(127, 87);
             this.txtPublisher.Name = "txtPublisher";
             this.txtPublisher.Size = new System.Drawing.Size(162, 22);
-            this.txtPublisher.TabIndex = 38;
+            this.txtPublisher.TabIndex = 2;
             // 
             // txtDeveloper
             // 
             this.txtDeveloper.Location = new System.Drawing.Point(127, 59);
             this.txtDeveloper.Name = "txtDeveloper";
             this.txtDeveloper.Size = new System.Drawing.Size(162, 22);
-            this.txtDeveloper.TabIndex = 37;
+            this.txtDeveloper.TabIndex = 1;
             // 
             // txtTitle
             // 
             this.txtTitle.Location = new System.Drawing.Point(127, 31);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(162, 22);
-            this.txtTitle.TabIndex = 36;
+            this.txtTitle.TabIndex = 0;
             // 
             // lblGenre
             // 
@@ -185,8 +190,10 @@
             // 
             // frmNewGame
             // 
+            this.AcceptButton = this.btnAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(323, 300);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.lblPrice);

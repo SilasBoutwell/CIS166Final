@@ -21,7 +21,10 @@ namespace GameStore
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Form addGame = new frmNewGame();
-            addGame.ShowDialog();
+            if (addGame.ShowDialog() == DialogResult.OK)
+            {
+                
+            }
         }
 
         // Event handler to delete game 

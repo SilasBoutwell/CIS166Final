@@ -42,8 +42,10 @@
             // 
             this.rchGameInventory.Location = new System.Drawing.Point(51, 78);
             this.rchGameInventory.Name = "rchGameInventory";
+            this.rchGameInventory.ReadOnly = true;
             this.rchGameInventory.Size = new System.Drawing.Size(426, 251);
             this.rchGameInventory.TabIndex = 0;
+            this.rchGameInventory.TabStop = false;
             this.rchGameInventory.Text = "";
             // 
             // btnExit

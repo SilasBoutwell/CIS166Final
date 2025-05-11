@@ -32,7 +32,7 @@ namespace GameStore
         //Override ToString method to display game information
         public override string ToString()
         {
-            return $"{Title} - {Genre} - {Platform} - ${Price}";
+            return $"{Title}|{Developer}|{Publisher}|{Genre}|{Platform}|{Region}|${Price}";
         }
     }
 }
