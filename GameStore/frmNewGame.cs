@@ -33,7 +33,7 @@ namespace GameStore
                     cboRegion.SelectedItem.ToString(),
                     decimal.Parse(txtPrice.Text));
 
-                this.Tag = game.ToString();
+                GameDB.Save(game);
                 this.DialogResult = DialogResult.OK;
             }
         }

@@ -35,7 +35,7 @@
             this.txtPlatform = new System.Windows.Forms.TextBox();
             this.lblPlatform = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.txtGenre = new System.Windows.Forms.TextBox();
             this.txtPublisher = new System.Windows.Forms.TextBox();
             this.txtDeveloper = new System.Windows.Forms.TextBox();
@@ -103,21 +103,24 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(209, 257);
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnExit.Location = new System.Drawing.Point(204, 255);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.Size = new System.Drawing.Size(80, 26);
             this.btnExit.TabIndex = 25;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // btnAdd
+            // btnDelete
             // 
-            this.btnAdd.Location = new System.Drawing.Point(109, 257);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 24;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(92, 255);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(80, 26);
+            this.btnDelete.TabIndex = 24;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtGenre
             // 
@@ -185,9 +188,11 @@
             // 
             // frmDeleteGame
             // 
+            this.AcceptButton = this.btnDelete;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(335, 326);
+            this.CancelButton = this.btnExit;
+            this.ClientSize = new System.Drawing.Size(332, 318);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.cboRegion);
@@ -195,7 +200,7 @@
             this.Controls.Add(this.txtPlatform);
             this.Controls.Add(this.lblPlatform);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.txtGenre);
             this.Controls.Add(this.txtPublisher);
             this.Controls.Add(this.txtDeveloper);
@@ -220,7 +225,7 @@
         private System.Windows.Forms.TextBox txtPlatform;
         private System.Windows.Forms.Label lblPlatform;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.TextBox txtGenre;
         private System.Windows.Forms.TextBox txtPublisher;
         private System.Windows.Forms.TextBox txtDeveloper;

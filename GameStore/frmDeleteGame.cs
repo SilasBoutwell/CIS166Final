@@ -16,5 +16,17 @@ namespace GameStore
         {
             InitializeComponent();
         }
+
+        //Event that deletes game
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            //Code to delete the game in here
+        }
+
+        //Event handler to close form
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

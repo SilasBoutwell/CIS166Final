@@ -1,28 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Drawing.Text;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace GameStore.Data
 {
-    public class GameDB
+    public static class GameDB
     {
-        public GameDB() { }
+        const string GamePath = @"Games.txt";
 
-        //Method to add a game to the list
-        public void AddGame(Game game)
+        public static void Save(Game game)
         {
-            System.IO.File.WriteAllText("Games.txt", game.ToString());
-        }
+            //string games = System.IO.File.ReadAllText(GamePath);
+            //games += game.ToString() + Environment.NewLine;
+            //System.IO.File.WriteAllText(GamePath, games);
 
-        //Method to remove a game from the list
-        public void RemoveGame(Game game)
-        {
-            // Assuming we are removing the game by title
-            var games = System.IO.File.ReadAllLines("Games.txt").ToList();
-            games.RemoveAll(g => g.StartsWith(game.Title));
-            System.IO.File.WriteAllLines("Games.txt", games);
+            System.IO.File.AppendAllText(GamePath, game.ToString() + Environment.NewLine);
         }
     }
 }

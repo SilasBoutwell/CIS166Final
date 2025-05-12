@@ -17,13 +17,25 @@ namespace GameStore
             InitializeComponent();
         }
 
+        //Method to update the text box with the game list
+        private void UpdateTextBox()
+        {
+            rchGameInventory.Clear();
+            //foreach (var game in GameDB.GetAllGames())
+            //{
+            //    rchGameInventory.AppendText(game.ToString() + Environment.NewLine);
+            //}
+            string gamesResult = System.IO.File.ReadAllText(@"../../Data/Games.txt");
+            rchGameInventory.AppendText(gamesResult);
+        }
+
         //Event handler to add a game
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Form addGame = new frmNewGame();
             if (addGame.ShowDialog() == DialogResult.OK)
             {
-                
+                UpdateTextBox();
             }
         }
 
