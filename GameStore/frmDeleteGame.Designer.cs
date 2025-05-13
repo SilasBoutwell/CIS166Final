@@ -28,30 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtPrice = new System.Windows.Forms.TextBox();
             this.lblPrice = new System.Windows.Forms.Label();
             this.cboRegion = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtPlatform = new System.Windows.Forms.TextBox();
             this.lblPlatform = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.txtGenre = new System.Windows.Forms.TextBox();
-            this.txtPublisher = new System.Windows.Forms.TextBox();
-            this.txtDeveloper = new System.Windows.Forms.TextBox();
-            this.txtTitle = new System.Windows.Forms.TextBox();
             this.lblGenre = new System.Windows.Forms.Label();
             this.lblPublisher = new System.Windows.Forms.Label();
             this.lblDeveloper = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.cboTitle = new System.Windows.Forms.ComboBox();
+            this.cboDeveloper = new System.Windows.Forms.ComboBox();
+            this.cboPublisher = new System.Windows.Forms.ComboBox();
+            this.cboGenre = new System.Windows.Forms.ComboBox();
+            this.cboPlatform = new System.Windows.Forms.ComboBox();
+            this.cboPrice = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(122, 211);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(162, 22);
-            this.txtPrice.TabIndex = 31;
             // 
             // lblPrice
             // 
@@ -66,11 +59,6 @@
             // 
             this.cboRegion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboRegion.FormattingEnabled = true;
-            this.cboRegion.Items.AddRange(new object[] {
-            "North America",
-            "Europe",
-            "Japan",
-            "Korea"});
             this.cboRegion.Location = new System.Drawing.Point(122, 181);
             this.cboRegion.Name = "cboRegion";
             this.cboRegion.Size = new System.Drawing.Size(162, 24);
@@ -84,13 +72,6 @@
             this.label1.Size = new System.Drawing.Size(54, 16);
             this.label1.TabIndex = 28;
             this.label1.Text = "Region:";
-            // 
-            // txtPlatform
-            // 
-            this.txtPlatform.Location = new System.Drawing.Point(122, 153);
-            this.txtPlatform.Name = "txtPlatform";
-            this.txtPlatform.Size = new System.Drawing.Size(162, 22);
-            this.txtPlatform.TabIndex = 27;
             // 
             // lblPlatform
             // 
@@ -121,34 +102,6 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // txtGenre
-            // 
-            this.txtGenre.Location = new System.Drawing.Point(122, 125);
-            this.txtGenre.Name = "txtGenre";
-            this.txtGenre.Size = new System.Drawing.Size(162, 22);
-            this.txtGenre.TabIndex = 23;
-            // 
-            // txtPublisher
-            // 
-            this.txtPublisher.Location = new System.Drawing.Point(122, 98);
-            this.txtPublisher.Name = "txtPublisher";
-            this.txtPublisher.Size = new System.Drawing.Size(162, 22);
-            this.txtPublisher.TabIndex = 22;
-            // 
-            // txtDeveloper
-            // 
-            this.txtDeveloper.Location = new System.Drawing.Point(122, 70);
-            this.txtDeveloper.Name = "txtDeveloper";
-            this.txtDeveloper.Size = new System.Drawing.Size(162, 22);
-            this.txtDeveloper.TabIndex = 21;
-            // 
-            // txtTitle
-            // 
-            this.txtTitle.Location = new System.Drawing.Point(122, 42);
-            this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(162, 22);
-            this.txtTitle.TabIndex = 20;
             // 
             // lblGenre
             // 
@@ -186,6 +139,62 @@
             this.lblTitle.TabIndex = 16;
             this.lblTitle.Text = "Title:";
             // 
+            // cboTitle
+            // 
+            this.cboTitle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTitle.FormattingEnabled = true;
+            this.cboTitle.Location = new System.Drawing.Point(122, 42);
+            this.cboTitle.Name = "cboTitle";
+            this.cboTitle.Size = new System.Drawing.Size(162, 24);
+            this.cboTitle.TabIndex = 32;
+            this.cboTitle.SelectedIndexChanged += new System.EventHandler(this.cboTitle_SelectedIndexChanged);
+            // 
+            // cboDeveloper
+            // 
+            this.cboDeveloper.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDeveloper.FormattingEnabled = true;
+            this.cboDeveloper.Location = new System.Drawing.Point(122, 70);
+            this.cboDeveloper.Name = "cboDeveloper";
+            this.cboDeveloper.Size = new System.Drawing.Size(162, 24);
+            this.cboDeveloper.TabIndex = 33;
+            this.cboDeveloper.SelectedIndexChanged += new System.EventHandler(this.cboDeveloper_SelectedIndexChanged);
+            // 
+            // cboPublisher
+            // 
+            this.cboPublisher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPublisher.FormattingEnabled = true;
+            this.cboPublisher.Location = new System.Drawing.Point(122, 98);
+            this.cboPublisher.Name = "cboPublisher";
+            this.cboPublisher.Size = new System.Drawing.Size(162, 24);
+            this.cboPublisher.TabIndex = 34;
+            // 
+            // cboGenre
+            // 
+            this.cboGenre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGenre.FormattingEnabled = true;
+            this.cboGenre.Location = new System.Drawing.Point(122, 125);
+            this.cboGenre.Name = "cboGenre";
+            this.cboGenre.Size = new System.Drawing.Size(162, 24);
+            this.cboGenre.TabIndex = 35;
+            // 
+            // cboPlatform
+            // 
+            this.cboPlatform.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPlatform.FormattingEnabled = true;
+            this.cboPlatform.Location = new System.Drawing.Point(122, 153);
+            this.cboPlatform.Name = "cboPlatform";
+            this.cboPlatform.Size = new System.Drawing.Size(162, 24);
+            this.cboPlatform.TabIndex = 36;
+            // 
+            // cboPrice
+            // 
+            this.cboPrice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPrice.FormattingEnabled = true;
+            this.cboPrice.Location = new System.Drawing.Point(122, 211);
+            this.cboPrice.Name = "cboPrice";
+            this.cboPrice.Size = new System.Drawing.Size(162, 24);
+            this.cboPrice.TabIndex = 37;
+            // 
             // frmDeleteGame
             // 
             this.AcceptButton = this.btnDelete;
@@ -193,18 +202,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(332, 318);
-            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.cboPrice);
+            this.Controls.Add(this.cboPlatform);
+            this.Controls.Add(this.cboGenre);
+            this.Controls.Add(this.cboPublisher);
+            this.Controls.Add(this.cboDeveloper);
+            this.Controls.Add(this.cboTitle);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.cboRegion);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtPlatform);
             this.Controls.Add(this.lblPlatform);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.txtGenre);
-            this.Controls.Add(this.txtPublisher);
-            this.Controls.Add(this.txtDeveloper);
-            this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.lblGenre);
             this.Controls.Add(this.lblPublisher);
             this.Controls.Add(this.lblDeveloper);
@@ -217,22 +226,21 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.ComboBox cboRegion;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtPlatform;
         private System.Windows.Forms.Label lblPlatform;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.TextBox txtGenre;
-        private System.Windows.Forms.TextBox txtPublisher;
-        private System.Windows.Forms.TextBox txtDeveloper;
-        private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.Label lblGenre;
         private System.Windows.Forms.Label lblPublisher;
         private System.Windows.Forms.Label lblDeveloper;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.ComboBox cboTitle;
+        private System.Windows.Forms.ComboBox cboDeveloper;
+        private System.Windows.Forms.ComboBox cboPublisher;
+        private System.Windows.Forms.ComboBox cboGenre;
+        private System.Windows.Forms.ComboBox cboPlatform;
+        private System.Windows.Forms.ComboBox cboPrice;
     }
 }
