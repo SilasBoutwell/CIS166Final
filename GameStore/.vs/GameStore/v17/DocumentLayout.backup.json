@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:frmdeletegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\gamelist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:gamelist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -29,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\data\\gamedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:data\\gamedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "GameList.cs",
               "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\GameList.cs",
               "RelativeDocumentMoniker": "GameList.cs",
@@ -66,7 +66,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Games.txt",
               "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Data\\Games.txt",
               "RelativeDocumentMoniker": "Data\\Games.txt",
@@ -78,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "GameDB.cs",
               "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Data\\GameDB.cs",
               "RelativeDocumentMoniker": "Data\\GameDB.cs",
@@ -90,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "frmNewGame.cs",
               "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmNewGame.cs",
               "RelativeDocumentMoniker": "frmNewGame.cs",
@@ -102,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "frmGameStore.cs",
               "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmGameStore.cs",
               "RelativeDocumentMoniker": "frmGameStore.cs",
@@ -118,9 +118,9 @@
               "Title": "frmDeleteGame.cs",
               "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmDeleteGame.cs",
               "RelativeDocumentMoniker": "frmDeleteGame.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmDeleteGame.cs*",
-              "RelativeToolTip": "frmDeleteGame.cs*",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAkwFIAAAAuAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmDeleteGame.cs",
+              "RelativeToolTip": "frmDeleteGame.cs",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAwwMAAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T18:30:00.249Z",
               "EditorCaption": ""
@@ -131,23 +131,24 @@
               "Title": "frmDeleteGame.cs [Design]",
               "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmDeleteGame.cs",
               "RelativeDocumentMoniker": "frmDeleteGame.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmDeleteGame.cs [Design]*",
-              "RelativeToolTip": "frmDeleteGame.cs [Design]*",
+              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmDeleteGame.cs [Design]",
+              "RelativeToolTip": "frmDeleteGame.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-13T18:23:03.158Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Game.cs",
               "RelativeDocumentMoniker": "Game.cs",
               "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Game.cs",
               "RelativeToolTip": "Game.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAkwCIAAACZAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAA5wCIAAACZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T17:51:52.219Z"
+              "WhenOpened": "2025-05-13T17:51:52.219Z",
+              "EditorCaption": ""
             }
           ]
         }

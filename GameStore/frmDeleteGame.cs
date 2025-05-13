@@ -80,16 +80,126 @@ namespace GameStore
                         break;
 
                     string[] parts = developer.Split('|');
-                    string publisher = parts[2].Split(':')[1];
+                    string item = parts[2].Split(':')[1];
 
-                    if (!cboPublisher.Items.Contains(publisher))
+                    if (!cboPublisher.Items.Contains(item))
                     {
-                        cboPublisher.Items.Add(publisher);
+                        cboPublisher.Items.Add(item);
                     }
                 }
             }
             if (cboPublisher.Items.Count > 0)
                 cboPublisher.SelectedIndex = 0;
+        }
+
+        private void cboPublisher_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cboGenre.Items.Clear();
+            string[] genres = System.IO.File.ReadAllText("../../Data/Games.txt").ToString().Split('\n');
+            foreach (string genre in genres)
+            {
+                if (genre.Contains(cboTitle.Text) && 
+                    genre.Contains(cboDeveloper.Text) &&
+                    genre.Contains(cboPublisher.Text))
+                {
+                    if (genre == "")
+                        break;
+
+                    string[] parts = genre.Split('|');
+                    string item = parts[3].Split(':')[1];
+
+                    if (!cboGenre.Items.Contains(item))
+                    {
+                        cboGenre.Items.Add(item);
+                    }
+                }
+            }
+            if (cboGenre.Items.Count > 0)
+                cboGenre.SelectedIndex = 0;
+        }
+
+        private void cboGenre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cboPlatform.Items.Clear();
+            string[] platforms = System.IO.File.ReadAllText("../../Data/Games.txt").ToString().Split('\n');
+            foreach (string platform in platforms)
+            {
+                if (platform.Contains(cboTitle.Text) &&
+                    platform.Contains(cboDeveloper.Text) &&
+                    platform.Contains(cboPublisher.Text) &&
+                    platform.Contains(cboGenre.Text))
+                {
+                    if (platform == "")
+                        break;
+
+                    string[] parts = platform.Split('|');
+                    string item = parts[4].Split(':')[1];
+
+                    if (!cboPlatform.Items.Contains(item))
+                    {
+                        cboPlatform.Items.Add(item);
+                    }
+                }
+            }
+            if (cboPlatform.Items.Count > 0)
+                cboPlatform.SelectedIndex = 0;
+        }
+
+        private void cboPlatform_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cboRegion.Items.Clear();
+            string[] regions = System.IO.File.ReadAllText("../../Data/Games.txt").ToString().Split('\n');
+            foreach (string region in regions)
+            {
+                if (region.Contains(cboTitle.Text) &&
+                    region.Contains(cboDeveloper.Text) &&
+                    region.Contains(cboPublisher.Text) &&
+                    region.Contains(cboGenre.Text) &&
+                    region.Contains(cboRegion.Text))
+                {
+                    if (region == "")
+                        break;
+
+                    string[] parts = region.Split('|');
+                    string item = parts[5].Split(':')[1];
+
+                    if (!cboRegion.Items.Contains(item))
+                    {
+                        cboRegion.Items.Add(item);
+                    }
+                }
+            }
+            if (cboRegion.Items.Count > 0)
+                cboRegion.SelectedIndex = 0;
+        }
+
+        private void cboRegion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cboPrice.Items.Clear();
+            string[] prices = System.IO.File.ReadAllText("../../Data/Games.txt").ToString().Split('\n');
+            foreach (string price in prices)
+            {
+                if (price.Contains(cboTitle.Text) &&
+                    price.Contains(cboDeveloper.Text) &&
+                    price.Contains(cboPublisher.Text) &&
+                    price.Contains(cboGenre.Text) &&
+                    price.Contains(cboRegion.Text) &&
+                    price.Contains(cboPrice.Text))
+                {
+                    if (price == "")
+                        break;
+
+                    string[] parts = price.Split('|');
+                    string item = parts[6].Split(':')[1];
+
+                    if (!cboPrice.Items.Contains(item))
+                    {
+                        cboPrice.Items.Add(item);
+                    }
+                }
+            }
+            if (cboPrice.Items.Count > 0)
+                cboPrice.SelectedIndex = 0;
         }
     }
 }

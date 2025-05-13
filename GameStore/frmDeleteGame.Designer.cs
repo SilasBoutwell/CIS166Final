@@ -63,6 +63,7 @@
             this.cboRegion.Name = "cboRegion";
             this.cboRegion.Size = new System.Drawing.Size(162, 24);
             this.cboRegion.TabIndex = 29;
+            this.cboRegion.SelectedIndexChanged += new System.EventHandler(this.cboRegion_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -167,6 +168,7 @@
             this.cboPublisher.Name = "cboPublisher";
             this.cboPublisher.Size = new System.Drawing.Size(162, 24);
             this.cboPublisher.TabIndex = 34;
+            this.cboPublisher.SelectedIndexChanged += new System.EventHandler(this.cboPublisher_SelectedIndexChanged);
             // 
             // cboGenre
             // 
@@ -176,6 +178,7 @@
             this.cboGenre.Name = "cboGenre";
             this.cboGenre.Size = new System.Drawing.Size(162, 24);
             this.cboGenre.TabIndex = 35;
+            this.cboGenre.SelectedIndexChanged += new System.EventHandler(this.cboGenre_SelectedIndexChanged);
             // 
             // cboPlatform
             // 
@@ -185,6 +188,7 @@
             this.cboPlatform.Name = "cboPlatform";
             this.cboPlatform.Size = new System.Drawing.Size(162, 24);
             this.cboPlatform.TabIndex = 36;
+            this.cboPlatform.SelectedIndexChanged += new System.EventHandler(this.cboPlatform_SelectedIndexChanged);
             // 
             // cboPrice
             // 
