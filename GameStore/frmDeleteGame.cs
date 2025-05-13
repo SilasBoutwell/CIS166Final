@@ -46,6 +46,7 @@ namespace GameStore
 
         private void cboTitle_SelectedIndexChanged(object sender, EventArgs e)
         {
+            cboDeveloper.Items.Clear();
             string[] games = System.IO.File.ReadAllText("../../Data/Games.txt").ToString().Split('\n');
             foreach (string game in games)
             {
@@ -55,7 +56,7 @@ namespace GameStore
                         break;
 
                     string[] parts = game.Split('|');
-                    string developer = parts[2].Split(':')[1];
+                    string developer = parts[1].Split(':')[1];
 
                     if (!cboDeveloper.Items.Contains(developer))
                     {
@@ -79,7 +80,7 @@ namespace GameStore
                         break;
 
                     string[] parts = developer.Split('|');
-                    string publisher = parts[3].Split(':')[1];
+                    string publisher = parts[2].Split(':')[1];
 
                     if (!cboPublisher.Items.Contains(publisher))
                     {
