@@ -66,6 +66,7 @@
       <DependentUpon>frmGameStore.cs</DependentUpon>
     </Compile>
     <Compile Include="Game.cs" />
+    <Compile Include="GameList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDeleteGame.resx">

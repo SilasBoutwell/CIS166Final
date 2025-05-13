@@ -11,15 +11,13 @@ namespace GameStore.Data
 {
     public static class GameDB
     {
-        const string GamePath = @"Games.txt";
+        const string GamePath = @"../../Data/Games.txt";
 
         public static void Save(Game game)
         {
-            //string games = System.IO.File.ReadAllText(GamePath);
-            //games += game.ToString() + Environment.NewLine;
-            //System.IO.File.WriteAllText(GamePath, games);
-
-            System.IO.File.AppendAllText(GamePath, game.ToString() + Environment.NewLine);
+            string games = System.IO.File.ReadAllText(GamePath);
+            games += game.ToString() + Environment.NewLine;
+            System.IO.File.WriteAllText(GamePath, games);
         }
     }
 }

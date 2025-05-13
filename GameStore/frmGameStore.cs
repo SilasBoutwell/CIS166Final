@@ -15,18 +15,18 @@ namespace GameStore
         public frmGameStore()
         {
             InitializeComponent();
+            UpdateTextBox();
         }
 
         //Method to update the text box with the game list
         private void UpdateTextBox()
         {
             rchGameInventory.Clear();
-            //foreach (var game in GameDB.GetAllGames())
-            //{
-            //    rchGameInventory.AppendText(game.ToString() + Environment.NewLine);
-            //}
-            string gamesResult = System.IO.File.ReadAllText(@"../../Data/Games.txt");
-            rchGameInventory.AppendText(gamesResult);
+            string[] games = System.IO.File.ReadAllText(@"../../Data/Games.txt").Split('|');
+            foreach (var game in games)
+            {
+                rchGameInventory.AppendText(game + Environment.NewLine);
+            }
         }
 
         //Event handler to add a game

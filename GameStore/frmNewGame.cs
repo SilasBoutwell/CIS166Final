@@ -44,7 +44,7 @@ namespace GameStore
             this.Close();
         }
 
-        //Method to data validation
+        //Method for data validation
         private bool isValid()
         {
             if (String.IsNullOrWhiteSpace(txtTitle.Text))
@@ -67,13 +67,13 @@ namespace GameStore
 
             else if (String.IsNullOrWhiteSpace(txtGenre.Text))
             {
-                MessageBox.Show("Please enter the publisher name", "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter the genre", "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
             else if (String.IsNullOrWhiteSpace(txtPlatform.Text))
             {
-                MessageBox.Show("Please enter the platform name", "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter a platform", "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -85,7 +85,7 @@ namespace GameStore
 
             else if (String.IsNullOrWhiteSpace(txtPrice.Text))
             {
-                MessageBox.Show("Please enter the publisher name", "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter a price", "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 

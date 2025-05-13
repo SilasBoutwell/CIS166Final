@@ -53,7 +53,7 @@
             this.btnExit.Location = new System.Drawing.Point(492, 302);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(83, 27);
-            this.btnExit.TabIndex = 1;
+            this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -63,7 +63,7 @@
             this.btnAdd.Location = new System.Drawing.Point(492, 194);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(83, 27);
-            this.btnAdd.TabIndex = 2;
+            this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -99,7 +99,7 @@
             this.btnDelete.Location = new System.Drawing.Point(492, 230);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(83, 27);
-            this.btnDelete.TabIndex = 6;
+            this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -109,7 +109,7 @@
             this.btnViewAll.Location = new System.Drawing.Point(492, 266);
             this.btnViewAll.Name = "btnViewAll";
             this.btnViewAll.Size = new System.Drawing.Size(83, 27);
-            this.btnViewAll.TabIndex = 7;
+            this.btnViewAll.TabIndex = 2;
             this.btnViewAll.Text = "View All";
             this.btnViewAll.UseVisualStyleBackColor = true;
             this.btnViewAll.Click += new System.EventHandler(this.btnViewAll_Click);

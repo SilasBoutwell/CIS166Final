@@ -1,3 +1,2 @@
-Warzone|COD|COD|War|PC|North America|$99.99Warzone|COD|COD|War|PC|North America|$99.99
-Warzone|COD|COD|War|PC|North America|$99.99
-Warzone|COD|COD|War|PC|North America|$99.99
+warzone|cod|cod|war|pc|Europe|$99.99warzone|cod|cod|war|pc|North America|$99.99
+warzone|cod|cod|war|pc|Europe|$99.99
