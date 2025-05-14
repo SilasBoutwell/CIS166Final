@@ -95,6 +95,25 @@ namespace GameStore
             Form deteleGame = new frmDeleteGame();
             if (deteleGame.ShowDialog() == DialogResult.OK)
             {
+                Game toDelete = (Game)deteleGame.Tag;
+                var updatedGames = gameList.GetAllGames()
+                    .Where(g =>
+                        !(
+                            g.Title == toDelete.Title &&
+                            g.Developer == toDelete.Developer &&
+                            g.Publisher == toDelete.Publisher &&
+                            g.Genre == toDelete.Genre &&
+                            g.Platform == toDelete.Platform &&
+                            g.Region == toDelete.Region &&
+                            g.Price == toDelete.Price
+                        )
+                    ).ToList();
+
+                gameList = new GameList();
+                foreach (var g in updatedGames)
+                    gameList.AddGame(g);
+
+                System.IO.File.WriteAllLines(@"../../Data/Games.txt", updatedGames.Select(g => g.ToString()));
                 LoadGamesFromFile();
                 UpdateTextBox();
             }
@@ -103,6 +122,8 @@ namespace GameStore
         //Event handler to view all games and clear filters
         private void btnViewAll_Click(object sender, EventArgs e)
         {
+            txtFilter.Clear();
+            LoadGamesFromFile();
             UpdateTextBox();
         }
 

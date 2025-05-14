@@ -71,7 +71,8 @@
             "North America",
             "Europe",
             "Japan",
-            "Korea"});
+            "Korea",
+            "Asia"});
             this.cboRegion.Location = new System.Drawing.Point(127, 170);
             this.cboRegion.Name = "cboRegion";
             this.cboRegion.Size = new System.Drawing.Size(162, 24);

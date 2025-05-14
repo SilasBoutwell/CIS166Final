@@ -35,7 +35,18 @@ namespace GameStore
         //Event that deletes game
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            //Code to delete the game in here
+            Game game = new Game(
+                cboTitle.Text,
+                cboDeveloper.Text,
+                cboPublisher.Text,
+                cboGenre.Text,
+                cboPlatform.Text,
+                cboRegion.Text,
+                decimal.Parse(cboPrice.Text.Replace("$", "")));
+
+            this.Tag = game;
+            MessageBox.Show("Game deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.DialogResult = DialogResult.OK;
         }
 
         //Event handler to close form
@@ -43,6 +54,12 @@ namespace GameStore
         {
             this.Close();
         }
+
+
+
+        //*****
+        //Following code is to populate the combo boxes
+        //*****
 
         private void cboTitle_SelectedIndexChanged(object sender, EventArgs e)
         {

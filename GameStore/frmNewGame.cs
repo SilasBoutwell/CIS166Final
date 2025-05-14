@@ -34,6 +34,7 @@ namespace GameStore
                     decimal.Parse(txtPrice.Text));
 
                 GameDB.Save(game);
+                MessageBox.Show("Game added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
             }
         }
@@ -55,6 +56,22 @@ namespace GameStore
                 txtPrice.Text == "")
             {
                 MessageBox.Show("Please fill in all fields", "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (txtTitle.Text.Contains(":") ||
+                txtDeveloper.Text.Contains(":") ||
+                txtPublisher.Text.Contains(":") ||
+                txtGenre.Text.Contains(":") ||
+                txtPlatform.Text.Contains(":"))
+            {
+                MessageBox.Show("Please do not use ':' in any of the fields", "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            else if (cboRegion.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a valid region option", "Selection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
