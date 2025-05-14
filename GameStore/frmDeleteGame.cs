@@ -45,7 +45,6 @@ namespace GameStore
                 decimal.Parse(cboPrice.Text.Replace("$", "")));
 
             this.Tag = game;
-            MessageBox.Show("Game deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.DialogResult = DialogResult.OK;
         }
 

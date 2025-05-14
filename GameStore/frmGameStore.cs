@@ -17,6 +17,7 @@ namespace GameStore
             InitializeComponent();
             LoadGamesFromFile();
             UpdateTextBox();
+            cboPriceFilter.SelectedIndex = 0;
         }
 
         private GameList gameList = new GameList();
@@ -86,6 +87,7 @@ namespace GameStore
             {
                 LoadGamesFromFile();
                 UpdateTextBox();
+                MessageBox.Show("Game added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -96,26 +98,21 @@ namespace GameStore
             if (deteleGame.ShowDialog() == DialogResult.OK)
             {
                 Game toDelete = (Game)deteleGame.Tag;
+                var deleteFilter = new DeleteGameFilter(toDelete);
+
                 var updatedGames = gameList.GetAllGames()
-                    .Where(g =>
-                        !(
-                            g.Title == toDelete.Title &&
-                            g.Developer == toDelete.Developer &&
-                            g.Publisher == toDelete.Publisher &&
-                            g.Genre == toDelete.Genre &&
-                            g.Platform == toDelete.Platform &&
-                            g.Region == toDelete.Region &&
-                            g.Price == toDelete.Price
-                        )
-                    ).ToList();
+                    .Where(g => !deleteFilter.IsMatch(g))
+                    .ToList();
 
                 gameList = new GameList();
                 foreach (var g in updatedGames)
                     gameList.AddGame(g);
 
                 System.IO.File.WriteAllLines(@"../../Data/Games.txt", updatedGames.Select(g => g.ToString()));
+
                 LoadGamesFromFile();
                 UpdateTextBox();
+                MessageBox.Show("Game deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -123,6 +120,7 @@ namespace GameStore
         private void btnViewAll_Click(object sender, EventArgs e)
         {
             txtFilter.Clear();
+            cboPriceFilter.SelectedIndex = 0;
             LoadGamesFromFile();
             UpdateTextBox();
         }
@@ -132,29 +130,46 @@ namespace GameStore
         {
             this.Close();
         }
-
-        private void txtFilter_TextChanged(object sender, EventArgs e)
-        {
-            List<Game> gamesToDisplay;
-            if (string.IsNullOrWhiteSpace(txtFilter.Text))
-            {
-                gamesToDisplay = gameList.GetAllGames();
-            }
-            else
-            {
-                var filter = new SearchGameFilter(txtFilter.Text);
-                gamesToDisplay = gameList.FilterGames(filter);
-            }
-
-            rchGameInventory.Clear();
-            foreach (var game in gamesToDisplay)
-            {
-                rchGameInventory.AppendText(FormatGameForDisplay(game) + Environment.NewLine + Environment.NewLine);
-            }
-        }
         private string FormatGameForDisplay(Game game)
         {
             return game.ToString().Replace("|", Environment.NewLine);
+        }
+
+        private void cboPriceFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ApplyFilters();
+        }
+
+        private void txtFilter_TextChanged(object sender, EventArgs e)
+        {
+            ApplyFilters();
+        }
+
+        private void ApplyFilters()
+        {
+            string selectedPrice = cboPriceFilter.SelectedItem?.ToString();
+            IGameFilter priceFilter = new PriceRangeFilter(selectedPrice);
+
+            IEnumerable<Game> filteredGames = gameList.GetAllGames();
+
+            // Apply text filter if present
+            if (!string.IsNullOrWhiteSpace(txtFilter.Text))
+            {
+                var textFilter = new SearchGameFilter(txtFilter.Text);
+                filteredGames = filteredGames.Where(g => textFilter.IsMatch(g));
+            }
+
+            // Apply price filter if not "Price Filter"
+            if (selectedPrice != "Price Filter")
+            {
+                filteredGames = filteredGames.Where(g => priceFilter.IsMatch(g));
+            }
+
+            rchGameInventory.Clear();
+            foreach (var game in filteredGames)
+            {
+                rchGameInventory.AppendText(FormatGameForDisplay(game) + Environment.NewLine + Environment.NewLine);
+            }
         }
     }
 }

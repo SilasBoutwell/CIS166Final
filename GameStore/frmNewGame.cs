@@ -34,7 +34,6 @@ namespace GameStore
                     decimal.Parse(txtPrice.Text));
 
                 GameDB.Save(game);
-                MessageBox.Show("Game added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
             }
         }

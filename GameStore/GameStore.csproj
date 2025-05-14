@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\GameDB.cs" />
+    <Compile Include="DeleteGameFilter.cs" />
     <Compile Include="frmDeleteGame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +69,7 @@
     <Compile Include="Game.cs" />
     <Compile Include="GameList.cs" />
     <Compile Include="IGameFilter.cs" />
+    <Compile Include="PriceRangeFilter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchGameFilter.cs" />

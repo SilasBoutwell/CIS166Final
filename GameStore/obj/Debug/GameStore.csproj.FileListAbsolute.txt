@@ -21,3 +21,4 @@ C:\Users\silas\OneDrive\Coding\VisualStudio\CIS166\CIS166Final\GameStore\obj\Deb
 C:\Users\silas\OneDrive\Coding\VisualStudio\CIS166\CIS166Final\GameStore\obj\Debug\GameStore.csproj.CoreCompileInputs.cache
 C:\Users\silas\OneDrive\Coding\VisualStudio\CIS166\CIS166Final\GameStore\obj\Debug\GameStore.exe
 C:\Users\silas\OneDrive\Coding\VisualStudio\CIS166\CIS166Final\GameStore\obj\Debug\GameStore.pdb
+C:\Users\silas\OneDrive\Coding\VisualStudio\CIS166\CIS166Final\GameStore\obj\Debug\GameStore.exe.config

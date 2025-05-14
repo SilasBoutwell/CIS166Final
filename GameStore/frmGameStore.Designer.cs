@@ -35,6 +35,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnViewAll = new System.Windows.Forms.Button();
             this.txtFilter = new System.Windows.Forms.TextBox();
+            this.cboPriceFilter = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // rchGameInventory
@@ -42,14 +43,14 @@
             this.rchGameInventory.Location = new System.Drawing.Point(51, 78);
             this.rchGameInventory.Name = "rchGameInventory";
             this.rchGameInventory.ReadOnly = true;
-            this.rchGameInventory.Size = new System.Drawing.Size(323, 251);
+            this.rchGameInventory.Size = new System.Drawing.Size(352, 251);
             this.rchGameInventory.TabIndex = 0;
             this.rchGameInventory.TabStop = false;
             this.rchGameInventory.Text = "";
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(391, 302);
+            this.btnExit.Location = new System.Drawing.Point(422, 302);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(83, 27);
             this.btnExit.TabIndex = 3;
@@ -59,7 +60,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(391, 194);
+            this.btnAdd.Location = new System.Drawing.Point(422, 191);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(83, 27);
             this.btnAdd.TabIndex = 0;
@@ -78,7 +79,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(391, 230);
+            this.btnDelete.Location = new System.Drawing.Point(422, 265);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(83, 27);
             this.btnDelete.TabIndex = 1;
@@ -88,7 +89,7 @@
             // 
             // btnViewAll
             // 
-            this.btnViewAll.Location = new System.Drawing.Point(391, 266);
+            this.btnViewAll.Location = new System.Drawing.Point(422, 228);
             this.btnViewAll.Name = "btnViewAll";
             this.btnViewAll.Size = new System.Drawing.Size(83, 27);
             this.btnViewAll.TabIndex = 2;
@@ -100,15 +101,32 @@
             // 
             this.txtFilter.Location = new System.Drawing.Point(93, 45);
             this.txtFilter.Name = "txtFilter";
-            this.txtFilter.Size = new System.Drawing.Size(281, 22);
+            this.txtFilter.Size = new System.Drawing.Size(171, 22);
             this.txtFilter.TabIndex = 4;
             this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
+            // 
+            // cboPriceFilter
+            // 
+            this.cboPriceFilter.FormattingEnabled = true;
+            this.cboPriceFilter.Items.AddRange(new object[] {
+            "Price Filter",
+            "Free",
+            "$1-$19",
+            "$20-$49",
+            "$50-$99",
+            "$100+"});
+            this.cboPriceFilter.Location = new System.Drawing.Point(270, 43);
+            this.cboPriceFilter.Name = "cboPriceFilter";
+            this.cboPriceFilter.Size = new System.Drawing.Size(133, 24);
+            this.cboPriceFilter.TabIndex = 5;
+            this.cboPriceFilter.SelectedIndexChanged += new System.EventHandler(this.cboPriceFilter_SelectedIndexChanged);
             // 
             // frmGameStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 362);
+            this.ClientSize = new System.Drawing.Size(555, 371);
+            this.Controls.Add(this.cboPriceFilter);
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.btnViewAll);
             this.Controls.Add(this.btnDelete);
@@ -133,6 +151,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnViewAll;
         private System.Windows.Forms.TextBox txtFilter;
+        private System.Windows.Forms.ComboBox cboPriceFilter;
     }
 }
 

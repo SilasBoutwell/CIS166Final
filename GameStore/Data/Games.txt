@@ -31,4 +31,3 @@ Title: Call of Duty Warzone|Developer: Infinity Ward|Publisher: Activision|Genre
 Title: Call of Duty Warzone|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: Xbox|Region: North America|Price: $0.00
 Title: Call of Duty Warzone|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: Xbox|Region: Europe|Price: $0.00
 Title: Call of Duty Warzone|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: Xbox|Region: Asia|Price: $0.00
-Title: asd|Developer: asd|Publisher: asd|Genre: asd|Platform: asd|Region: North America|Price: $3
