@@ -67,8 +67,10 @@
     </Compile>
     <Compile Include="Game.cs" />
     <Compile Include="GameList.cs" />
+    <Compile Include="IGameFilter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchGameFilter.cs" />
     <EmbeddedResource Include="frmDeleteGame.resx">
       <DependentUpon>frmDeleteGame.cs</DependentUpon>
     </EmbeddedResource>

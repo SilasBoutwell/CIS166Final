@@ -32,5 +32,13 @@ namespace GameStore
         {
             return games;
         }
+
+        public List<Game> FilterGames(IGameFilter filter)
+        {
+            if (filter == null)
+                return new List<Game>(games);
+
+            return games.Where(game => filter.IsMatch(game)).ToList();
+        }
     }
 }

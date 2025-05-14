@@ -1,3 +1,4 @@
-Title: Warzone|Developer: COD|Publisher: COD|Genre: War|Platform: PC|Region: North America|Price: $89.99|
-Title: Minecraft|Developer: Something|Publisher: Something|Genre: Adventure|Platform: PC|Region: Europe|Price: $23.87|
-Title: BloodStrike|Developer: Project Blood Strike|Publisher: Blood Strike|Genre: War|Platform: PC|Region: North America|Price: $0|
+Title: Warzone|Developer: COD|Publisher: COD|Genre: War|Platform: PC|Region: North America|Price: $89.99
+Title: Minecraft|Developer: Something|Publisher: Something|Genre: Adventure|Platform: PC|Region: Europe|Price: $23.87
+Title: BloodStrike|Developer: Project Blood Strike|Publisher: Blood Strike|Genre: War|Platform: PC|Region: North America|Price: $0
+Title: Asphalt Legends|Developer: Gameloft|Publisher: Gameloft|Genre: Racing|Platform: PC|Region: North America|Price: $0
