@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace GameStore
 {
+    /// <summary>
+    /// This class represents the main form of the game store application.
+    /// </summary>
     public partial class frmGameStore : Form
     {
         public frmGameStore()

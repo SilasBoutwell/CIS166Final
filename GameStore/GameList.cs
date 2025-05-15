@@ -4,6 +4,10 @@ using System.Linq;
 
 namespace GameStore
 {
+    /// <summary>
+    /// This is a list that can hold any type of item.
+    /// </summary>
+    /// <typeparam name="T">Type of items in the list</typeparam>
     public class ItemList<T>
     {
         private List<T> items;

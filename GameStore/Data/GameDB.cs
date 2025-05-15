@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace GameStore.Data
 {
+    /// <summary>
+    /// A class to manage the game database.
+    /// </summary>
     public static class GameDB
     {
         const string GamePath = @"../../Data/Games.txt";

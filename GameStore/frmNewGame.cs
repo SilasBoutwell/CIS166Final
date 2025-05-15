@@ -11,6 +11,9 @@ using System.Windows.Forms;
 
 namespace GameStore
 {
+    /// <summary>
+    /// This class represents the form for adding a new game to the database.
+    /// </summary>
     public partial class frmNewGame : Form
     {
         public frmNewGame()

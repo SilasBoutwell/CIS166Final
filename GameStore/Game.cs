@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace GameStore
 {
+    /// <summary>
+    /// Game class represents a video game with various attributes.
+    /// </summary>
     public class Game
     {
 

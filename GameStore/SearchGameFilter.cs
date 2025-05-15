@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace GameStore
 {
+    /// <summary>
+    /// SearchGameFilter is a filter class that checks if a game matches the search term.
+    /// </summary>
     public class SearchGameFilter : IFilter<Game>
     {
         private readonly string _searchTerm;

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace GameStore
 {
+    /// <summary>
+    /// A filter class to check if a game matches the target game for deletion.
+    /// </summary>
     public class DeleteGameFilter : IFilter<Game>
     {
         private readonly Game _target;
