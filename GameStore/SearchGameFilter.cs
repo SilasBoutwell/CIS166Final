@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameStore
 {
-    public class SearchGameFilter : IGameFilter
+    public class SearchGameFilter : IFilter<Game>
     {
         private readonly string _searchTerm;
 

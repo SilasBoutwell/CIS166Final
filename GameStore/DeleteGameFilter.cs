@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameStore
 {
-    public class DeleteGameFilter : IGameFilter
+    public class DeleteGameFilter : IFilter<Game>
     {
         private readonly Game _target;
 

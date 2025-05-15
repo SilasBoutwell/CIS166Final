@@ -20,13 +20,13 @@ namespace GameStore
             cboPriceFilter.SelectedIndex = 0;
         }
 
-        private GameList gameList = new GameList();
+        private ItemList<Game> gameList = new ItemList<Game>();
 
         //Method to update the text box with the game list
         private void UpdateTextBox()
         {
             rchGameInventory.Clear();
-            foreach (var game in gameList.GetAllGames())
+            foreach (var game in gameList.GetAllItems())
             {
                 rchGameInventory.AppendText(FormatGameForDisplay(game) + Environment.NewLine + Environment.NewLine);
             }
@@ -34,7 +34,7 @@ namespace GameStore
 
         private void LoadGamesFromFile()
         {
-            gameList = new GameList();
+            gameList = new ItemList<Game>();
             string[] games = System.IO.File.ReadAllLines(@"../../Data/Games.txt");
             foreach (var gameStr in games)
             {
@@ -44,7 +44,7 @@ namespace GameStore
                     if (game == null)
                         MessageBox.Show("Could not parse: " + gameStr);
                     if(game != null) 
-                        gameList.AddGame(game);
+                        gameList.AddItem(game);
                 }
             }
         }
@@ -100,13 +100,13 @@ namespace GameStore
                 Game toDelete = (Game)deteleGame.Tag;
                 var deleteFilter = new DeleteGameFilter(toDelete);
 
-                var updatedGames = gameList.GetAllGames()
+                var updatedGames = gameList.GetAllItems()
                     .Where(g => !deleteFilter.IsMatch(g))
                     .ToList();
 
-                gameList = new GameList();
+                gameList = new ItemList<Game>();
                 foreach (var g in updatedGames)
-                    gameList.AddGame(g);
+                    gameList.AddItem(g);
 
                 System.IO.File.WriteAllLines(@"../../Data/Games.txt", updatedGames.Select(g => g.ToString()));
 
@@ -148,9 +148,9 @@ namespace GameStore
         private void ApplyFilters()
         {
             string selectedPrice = cboPriceFilter.SelectedItem?.ToString();
-            IGameFilter priceFilter = new PriceRangeFilter(selectedPrice);
+            IFilter<Game> priceFilter = new PriceRangeFilter(selectedPrice);
 
-            IEnumerable<Game> filteredGames = gameList.GetAllGames();
+            IEnumerable<Game> filteredGames = gameList.GetAllItems();
 
             // Apply text filter if present
             if (!string.IsNullOrWhiteSpace(txtFilter.Text))

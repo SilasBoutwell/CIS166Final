@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace GameStore
 {
-    public interface IGameFilter
+    public interface IFilter<T>
     {
-        bool IsMatch(Game game);
+        bool IsMatch(T item);
     }
 }

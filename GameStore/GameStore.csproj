@@ -68,7 +68,7 @@
     </Compile>
     <Compile Include="Game.cs" />
     <Compile Include="GameList.cs" />
-    <Compile Include="IGameFilter.cs" />
+    <Compile Include="IFilter.cs" />
     <Compile Include="PriceRangeFilter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

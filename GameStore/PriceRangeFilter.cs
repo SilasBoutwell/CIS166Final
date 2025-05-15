@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameStore
 {
-    public class PriceRangeFilter :IGameFilter
+    public class PriceRangeFilter : IFilter<Game>
     {
         private readonly decimal? min;
         private readonly decimal? max;
@@ -45,7 +45,8 @@ namespace GameStore
         public bool IsMatch(Game game)
         {
             if (min == null && max == null)
-                return true;
+                return true; // No filter
+
             if (min != null && max != null)
                 return game.Price >= min && game.Price <= max;
             if (min != null)

@@ -1,44 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GameStore
 {
-    public class GameList
+    public class ItemList<T>
     {
-        private List<Game> games;
+        private List<T> items;
 
-        public GameList()
+        public ItemList()
         {
-            games = new List<Game>();
+            items = new List<T>();
         }
 
-        //Method to add a game to the list
-        public void AddGame(Game game)
+        public void AddItem(T item)
         {
-            games.Add(game);
+            items.Add(item);
         }
 
-        //Method to remove a game from the list
-        public void RemoveGame(Game game)
+        public void RemoveItem(T item)
         {
-            games.Remove(game);
+            items.Remove(item);
         }
 
-        //Method to get all games in the list
-        public List<Game> GetAllGames()
+        public List<T> GetAllItems()
         {
-            return games;
+            return items;
         }
 
-        public List<Game> FilterGames(IGameFilter filter)
+        public List<T> FilterItems(IFilter<T> filter)
         {
             if (filter == null)
-                return new List<Game>(games);
+                return new List<T>(items);
 
-            return games.Where(game => filter.IsMatch(game)).ToList();
+            return items.Where(item => filter.IsMatch(item)).ToList();
         }
     }
 }
