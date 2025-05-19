@@ -107,5 +107,11 @@
   <ItemGroup>
     <Content Include="Data\Games.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ValidationLibrary\ValidationLibrary.csproj">
+      <Project>{4d30c2ba-466a-4ac8-a5ff-01292088377c}</Project>
+      <Name>ValidationLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

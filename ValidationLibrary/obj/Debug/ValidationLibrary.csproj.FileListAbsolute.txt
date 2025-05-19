@@ -1,6 +1,0 @@
-C:\Users\silas\OneDrive\Coding\VisualStudio\CIS166\ValidationLibrary\bin\Debug\ValidationLibrary.dll
-C:\Users\silas\OneDrive\Coding\VisualStudio\CIS166\ValidationLibrary\bin\Debug\ValidationLibrary.pdb
-C:\Users\silas\OneDrive\Coding\VisualStudio\CIS166\ValidationLibrary\obj\Debug\ValidationLibrary.csproj.AssemblyReference.cache
-C:\Users\silas\OneDrive\Coding\VisualStudio\CIS166\ValidationLibrary\obj\Debug\ValidationLibrary.csproj.CoreCompileInputs.cache
-C:\Users\silas\OneDrive\Coding\VisualStudio\CIS166\ValidationLibrary\obj\Debug\ValidationLibrary.dll
-C:\Users\silas\OneDrive\Coding\VisualStudio\CIS166\ValidationLibrary\obj\Debug\ValidationLibrary.pdb

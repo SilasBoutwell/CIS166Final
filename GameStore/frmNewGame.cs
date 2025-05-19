@@ -3,11 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Contracts;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ValidationLibrary;
 
 namespace GameStore
 {
@@ -50,17 +52,6 @@ namespace GameStore
         //Method for data validation
         private bool isValid()
         {
-            if (txtTitle.Text == "" ||
-                txtDeveloper.Text == "" ||
-                txtPublisher.Text == "" ||
-                txtGenre.Text == "" ||
-                txtPlatform.Text == "" ||
-                txtPrice.Text == "")
-            {
-                MessageBox.Show("Please fill in all fields", "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
             if (txtTitle.Text.Contains(":") ||
                 txtDeveloper.Text.Contains(":") ||
                 txtPublisher.Text.Contains(":") ||
@@ -83,19 +74,25 @@ namespace GameStore
                 return false;
             }
 
-            else if (!decimal.TryParse(txtPrice.Text, out decimal price))
+            if (txtTitle.Text == "" ||
+                txtDeveloper.Text == "" ||
+                txtPublisher.Text == "" ||
+                txtGenre.Text == "" ||
+                txtPlatform.Text == "" ||
+                txtPrice.Text == "")
             {
-                MessageBox.Show("Please enter a valid price", "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please fill in all fields", "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
-            else if (price < 0)
-            {
-                MessageBox.Show("Please enter a valid price", "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
-            return true;
+            return Validator.IsPresent(txtTitle) &&
+                   Validator.IsPresent(txtDeveloper) &&
+                   Validator.IsPresent(txtPublisher) &&
+                   Validator.IsPresent(txtGenre) &&
+                   Validator.IsPresent(txtPlatform) &&
+                   Validator.IsPresent(txtPrice) &&
+                   Validator.IsDecimal(txtPrice) &&
+                   Validator.IsWithinRange(txtPrice, 0, 1000);
         }
     }
 }
