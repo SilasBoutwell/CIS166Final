@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace GameStore
 {
     /// <summary>
-    /// Game class represents a video game with various attributes.
+    /// Represents a video game with various attributes.
     /// </summary>
     public class Game
     {

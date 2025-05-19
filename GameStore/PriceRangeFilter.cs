@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace GameStore
 {
     /// <summary>
-    /// PriceRangeFilter class implements IFilter interface to filter games based on their price range.
+    /// Implements IFilter interface to filter games based on their price range.
     /// </summary>
     public class PriceRangeFilter : IFilter<Game>
     {

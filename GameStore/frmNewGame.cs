@@ -14,7 +14,7 @@ using ValidationLibrary;
 namespace GameStore
 {
     /// <summary>
-    /// This class represents the form for adding a new game to the database.
+    /// Represents the form for adding a new game to the database.
     /// </summary>
     public partial class frmNewGame : Form
     {

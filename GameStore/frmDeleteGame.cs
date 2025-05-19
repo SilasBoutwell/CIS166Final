@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace GameStore
 {
     /// <summary>
-    /// Delete game form to allow user to delete a game from the database.
+    /// Allows user to delete a game from the database.
     /// </summary>
     public partial class frmDeleteGame : Form
     {
