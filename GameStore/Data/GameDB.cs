@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing.Text;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GameStore.Data
 {
@@ -18,9 +20,9 @@ namespace GameStore.Data
 
         public static void Save(Game game)
         {
-            string games = System.IO.File.ReadAllText(GamePath);
-            games += game.ToString() + Environment.NewLine;
-            System.IO.File.WriteAllText(GamePath, games);
+            StreamWriter sw = new StreamWriter(new FileStream(GamePath, FileMode.Append, FileAccess.Write));
+            sw.Write(game.ToString() + Environment.NewLine);
+            sw.Close();
         }
     }
 }
