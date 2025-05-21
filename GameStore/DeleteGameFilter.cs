@@ -21,6 +21,7 @@ namespace GameStore
         public bool IsMatch(Game game)
         {
             return
+                string.Equals(game.TimeStamp?.Trim(), _target.TimeStamp?.Trim(), StringComparison.OrdinalIgnoreCase) &&
                 string.Equals(game.Title?.Trim(), _target.Title?.Trim(), StringComparison.OrdinalIgnoreCase) &&
                 string.Equals(game.Developer?.Trim(), _target.Developer?.Trim(), StringComparison.OrdinalIgnoreCase) &&
                 string.Equals(game.Publisher?.Trim(), _target.Publisher?.Trim(), StringComparison.OrdinalIgnoreCase) &&

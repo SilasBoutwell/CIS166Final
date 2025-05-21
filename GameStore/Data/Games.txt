@@ -1,33 +1,33 @@
-Title: Minecraft|Developer: Mojang Studios|Publisher: Mojang Studios/Xbox Game Studios|Genre: Adventure|Platform: PC|Region: North America|Price: $13.99
-Title: Minecraft|Developer: Mojang Studios|Publisher: Mojang Studios/Xbox Game Studios|Genre: Adventure|Platform: PC|Region: Europe|Price: $13.99
-Title: Minecraft|Developer: Mojang Studios|Publisher: Mojang Studios/Xbox Game Studios|Genre: Adventure|Platform: PC|Region: Asia|Price: $13.99
-Title: Grand Theft Auto V|Developer: Rockstar North|Publisher: Rockstar Games|Genre: Action|Platform: PC|Region: Europe|Price: $19.99
-Title: Grand Theft Auto V|Developer: Rockstar North|Publisher: Rockstar Games|Genre: Action|Platform: PC|Region: Asia|Price: $19.99
-Title: Grand Theft Auto V|Developer: Rockstar North|Publisher: Rockstar Games|Genre: Action|Platform: PC|Region: North America|Price: $29.99
-Title: Wii Sports|Developer: Wii|Publisher: Nintendo|Genre: War|Platform: Wii|Region: North America|Price: $12.99
-Title: PUBG Battlegrounds|Developer: PUBG Studios|Publisher: Krafton|Genre: War|Platform: PC|Region: North America|Price: $9.99
-Title: PUBG Battlegrounds|Developer: PUBG Studios|Publisher: Krafton|Genre: War|Platform: PC|Region: Europe|Price: $9.99
-Title: Call of Duty Modern Warfare II|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: PC|Region: North America|Price: $69.99
-Title: Call of Duty Modern Warfare II|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: Xbox|Region: North America|Price: $69.99
-Title: Call of Duty Modern Warfare II|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: Xbox|Region: Europe|Price: $79.99
-Title: Call of Duty Modern Warfare II|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: PC|Region: Europe|Price: $79.99
-Title: Call of Duty Modern Warfare II|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: PC|Region: Asia|Price: $67.99
-Title: Apex Legends|Developer: Respawn Entertainment|Publisher: Electronic Arts|Genre: War|Platform: PC|Region: North America|Price: $0.00
-Title: Apex Legends|Developer: Respawn Entertainment|Publisher: Electronic Arts|Genre: War|Platform: PC|Region: Europe|Price: $0.00
-Title: Apex Legends|Developer: Respawn Entertainment|Publisher: Electronic Arts|Genre: War|Platform: PC|Region: Asia|Price: $0.00
-Title: Apex Legends|Developer: Respawn Entertainment|Publisher: Electronic Arts|Genre: War|Platform: Xbox|Region: North America|Price: $0.00
-Title: Apex Legends|Developer: Respawn Entertainment|Publisher: Electronic Arts|Genre: War|Platform: Xbox|Region: Europe|Price: $0.00
-Title: Blood Strike|Developer: Blood Strike|Publisher: Blood Strike|Genre: War|Platform: PC|Region: North America|Price: $0.00
-Title: Blood Strike|Developer: Blood Strike|Publisher: Blood Strike|Genre: War|Platform: PC|Region: Europe|Price: $0.00
-Title: Blood Strike|Developer: Blood Strike|Publisher: Blood Strike|Genre: War|Platform: PC|Region: Asia|Price: $0.00
-Title: Blood Strike|Developer: Blood Strike|Publisher: Blood Strike|Genre: War|Platform: PC|Region: Japan|Price: $0.00
-Title: Asphalt 9 Legends|Developer: Gameloft|Publisher: Gameloft|Genre: Racing|Platform: PC|Region: North America|Price: $0.00
-Title: Asphalt 9 Legends|Developer: Gameloft|Publisher: Gameloft|Genre: Racing|Platform: PC|Region: Europe|Price: $0.00
-Title: Asphalt 9 Legends|Developer: Gameloft|Publisher: Gameloft|Genre: Racing|Platform: PC|Region: Korea|Price: $0.00
-Title: Asphalt 9 Legends|Developer: Gameloft|Publisher: Gameloft|Genre: Racing|Platform: PC|Region: Japan|Price: $0.00
-Title: Call of Duty Warzone|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: PC|Region: North America|Price: $0.00
-Title: Call of Duty Warzone|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: PC|Region: Europe|Price: $0.00
-Title: Call of Duty Warzone|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: PC|Region: Asia|Price: $0.00
-Title: Call of Duty Warzone|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: Xbox|Region: North America|Price: $0.00
-Title: Call of Duty Warzone|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: Xbox|Region: Europe|Price: $0.00
-Title: Call of Duty Warzone|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: Xbox|Region: Asia|Price: $0.00
+4/10/2025 12:10:26 PM|Title: Minecraft|Developer: Mojang Studios|Publisher: Mojang Studios/Xbox Game Studios|Genre: Adventure|Platform: PC|Region: North America|Price: $13.99
+4/10/2025 12:10:29 PM|Title: Minecraft|Developer: Mojang Studios|Publisher: Mojang Studios/Xbox Game Studios|Genre: Adventure|Platform: PC|Region: Europe|Price: $13.99
+4/10/2025 12:10:31 PM|Title: Minecraft|Developer: Mojang Studios|Publisher: Mojang Studios/Xbox Game Studios|Genre: Adventure|Platform: PC|Region: Asia|Price: $13.99
+4/10/2025 12:10:33 PM|Title: Grand Theft Auto V|Developer: Rockstar North|Publisher: Rockstar Games|Genre: Action|Platform: PC|Region: Europe|Price: $19.99
+4/10/2025 12:10:34 PM|Title: Grand Theft Auto V|Developer: Rockstar North|Publisher: Rockstar Games|Genre: Action|Platform: PC|Region: Asia|Price: $19.99
+4/10/2025 12:10:36 PM|Title: Grand Theft Auto V|Developer: Rockstar North|Publisher: Rockstar Games|Genre: Action|Platform: PC|Region: North America|Price: $29.99
+4/10/2025 12:10:37 PM|Title: Wii Sports|Developer: Wii|Publisher: Nintendo|Genre: War|Platform: Wii|Region: North America|Price: $12.99
+4/10/2025 12:10:39 PM|Title: PUBG Battlegrounds|Developer: PUBG Studios|Publisher: Krafton|Genre: War|Platform: PC|Region: North America|Price: $9.99
+4/10/2025 12:11:12 PM|Title: PUBG Battlegrounds|Developer: PUBG Studios|Publisher: Krafton|Genre: War|Platform: PC|Region: Europe|Price: $9.99
+4/10/2025 12:12:33 PM|Title: Call of Duty Modern Warfare II|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: PC|Region: North America|Price: $69.99
+4/10/2025 12:13:31 PM|Title: Call of Duty Modern Warfare II|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: Xbox|Region: North America|Price: $69.99
+4/10/2025 12:14:31 PM|Title: Call of Duty Modern Warfare II|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: Xbox|Region: Europe|Price: $79.99
+4/10/2025 12:15:31 PM|Title: Call of Duty Modern Warfare II|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: PC|Region: Europe|Price: $79.99
+4/10/2025 12:16:31 PM|Title: Call of Duty Modern Warfare II|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: PC|Region: Asia|Price: $67.99
+4/11/2025 12:11:11 PM|Title: Apex Legends|Developer: Respawn Entertainment|Publisher: Electronic Arts|Genre: War|Platform: PC|Region: North America|Price: $0.00
+4/11/2025 12:11:21 PM|Title: Apex Legends|Developer: Respawn Entertainment|Publisher: Electronic Arts|Genre: War|Platform: PC|Region: Europe|Price: $0.00
+4/11/2025 12:11:31 PM|Title: Apex Legends|Developer: Respawn Entertainment|Publisher: Electronic Arts|Genre: War|Platform: PC|Region: Asia|Price: $0.00
+4/11/2025 12:11:41 PM|Title: Apex Legends|Developer: Respawn Entertainment|Publisher: Electronic Arts|Genre: War|Platform: Xbox|Region: North America|Price: $0.00
+4/11/2025 12:11:51 PM|Title: Apex Legends|Developer: Respawn Entertainment|Publisher: Electronic Arts|Genre: War|Platform: Xbox|Region: Europe|Price: $0.00
+4/11/2025 12:11:12 PM|Title: Blood Strike|Developer: Blood Strike|Publisher: Blood Strike|Genre: War|Platform: PC|Region: North America|Price: $0.00
+4/11/2025 12:11:13 PM|Title: Blood Strike|Developer: Blood Strike|Publisher: Blood Strike|Genre: War|Platform: PC|Region: Europe|Price: $0.00
+4/11/2025 12:11:17 PM|Title: Blood Strike|Developer: Blood Strike|Publisher: Blood Strike|Genre: War|Platform: PC|Region: Asia|Price: $0.00
+4/11/2025 12:14:11 PM|Title: Blood Strike|Developer: Blood Strike|Publisher: Blood Strike|Genre: War|Platform: PC|Region: Japan|Price: $0.00
+4/12/2025 12:16:11 PM|Title: Asphalt 9 Legends|Developer: Gameloft|Publisher: Gameloft|Genre: Racing|Platform: PC|Region: North America|Price: $0.00
+4/13/2025 12:16:11 PM|Title: Asphalt 9 Legends|Developer: Gameloft|Publisher: Gameloft|Genre: Racing|Platform: PC|Region: Europe|Price: $0.00
+4/14/2025 12:16:11 PM|Title: Asphalt 9 Legends|Developer: Gameloft|Publisher: Gameloft|Genre: Racing|Platform: PC|Region: Korea|Price: $0.00
+4/15/2025 12:16:11 PM|Title: Asphalt 9 Legends|Developer: Gameloft|Publisher: Gameloft|Genre: Racing|Platform: PC|Region: Japan|Price: $0.00
+4/16/2025 12:16:11 PM|Title: Call of Duty Warzone|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: PC|Region: North America|Price: $0.00
+4/17/2025 12:16:11 PM|Title: Call of Duty Warzone|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: PC|Region: Europe|Price: $0.00
+4/18/2025 12:16:11 PM|Title: Call of Duty Warzone|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: PC|Region: Asia|Price: $0.00
+4/19/2025 12:16:11 PM|Title: Call of Duty Warzone|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: Xbox|Region: North America|Price: $0.00
+4/23/2025 12:16:11 PM|Title: Call of Duty Warzone|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: Xbox|Region: Europe|Price: $0.00
+4/25/2025 12:16:11 PM|Title: Call of Duty Warzone|Developer: Infinity Ward|Publisher: Activision|Genre: War|Platform: Xbox|Region: Asia|Price: $0.00

@@ -29,7 +29,9 @@ namespace GameStore
         {
             if (isValid())
             {
+                DateTime currentDate = DateTime.Now;
                 Game game = new Game(
+                    currentDate.ToString(),
                     txtTitle.Text,
                     txtDeveloper.Text,
                     txtPublisher.Text,

@@ -25,7 +25,7 @@ namespace GameStore
                     break;
 
                 string[] parts = game.Split('|');
-                string title = parts[0].Split(':')[1];
+                string title = parts[1].Split(':')[1];
 
                 if (!cboTitle.Items.Contains(title))
                 {
@@ -38,14 +38,77 @@ namespace GameStore
         //Event that deletes game
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            // Read all games from file
+            string[] games = System.IO.File.ReadAllText("../../Data/Games.txt").Split('\n');
+            string timeStamp = null;
+
+            // Normalize user input for comparison
+            string selectedTitle = cboTitle.Text.Trim();
+            string selectedDeveloper = cboDeveloper.Text.Trim();
+            string selectedPublisher = cboPublisher.Text.Trim();
+            string selectedGenre = cboGenre.Text.Trim();
+            string selectedPlatform = cboPlatform.Text.Trim();
+            string selectedRegion = cboRegion.Text.Trim();
+            string selectedPriceStr = cboPrice.Text.Replace("$", "").Trim();
+            decimal selectedPrice;
+            if (!decimal.TryParse(selectedPriceStr, out selectedPrice))
+            {
+                MessageBox.Show("Invalid price format.", "Error");
+                return;
+            }
+
+            // Find the matching game entry
+            foreach (string gameLine in games)
+            {
+                if (string.IsNullOrWhiteSpace(gameLine))
+                    continue;
+
+                string[] parts = gameLine.Split('|');
+                if (parts.Length < 8)
+                    continue;
+
+                string title = parts[1].Split(':')[1].Trim();
+                string developer = parts[2].Split(':')[1].Trim();
+                string publisher = parts[3].Split(':')[1].Trim();
+                string genre = parts[4].Split(':')[1].Trim();
+                string platform = parts[5].Split(':')[1].Trim();
+                string region = parts[6].Split(':')[1].Trim();
+                string priceStr = parts[7].Split(':')[1].Replace("$", "").Trim();
+                decimal price;
+                if (!decimal.TryParse(priceStr, out price))
+                    continue;
+
+                if (string.Equals(title, selectedTitle, StringComparison.OrdinalIgnoreCase) &&
+                    string.Equals(developer, selectedDeveloper, StringComparison.OrdinalIgnoreCase) &&
+                    string.Equals(publisher, selectedPublisher, StringComparison.OrdinalIgnoreCase) &&
+                    string.Equals(genre, selectedGenre, StringComparison.OrdinalIgnoreCase) &&
+                    string.Equals(platform, selectedPlatform, StringComparison.OrdinalIgnoreCase) &&
+                    string.Equals(region, selectedRegion, StringComparison.OrdinalIgnoreCase) &&
+                    price == selectedPrice)
+                {
+                    timeStamp = parts[0].Trim();
+                    break;
+                }
+            }
+
+            // Only show error if not found after the loop
+            if (timeStamp == null)
+            {
+                MessageBox.Show("Could not find game", "Error");
+                return;
+            }
+
+            // Create the Game object with the timestamp
             Game game = new Game(
+                timeStamp,
                 cboTitle.Text,
                 cboDeveloper.Text,
                 cboPublisher.Text,
                 cboGenre.Text,
                 cboPlatform.Text,
                 cboRegion.Text,
-                decimal.Parse(cboPrice.Text.Replace("$", "")));
+                selectedPrice
+            );
 
             this.Tag = game;
             this.DialogResult = DialogResult.OK;
@@ -75,7 +138,7 @@ namespace GameStore
                         break;
 
                     string[] parts = game.Split('|');
-                    string developer = parts[1].Split(':')[1];
+                    string developer = parts[2].Split(':')[1];
 
                     if (!cboDeveloper.Items.Contains(developer))
                     {
@@ -99,7 +162,7 @@ namespace GameStore
                         break;
 
                     string[] parts = developer.Split('|');
-                    string item = parts[2].Split(':')[1];
+                    string item = parts[3].Split(':')[1];
 
                     if (!cboPublisher.Items.Contains(item))
                     {
@@ -125,7 +188,7 @@ namespace GameStore
                         break;
 
                     string[] parts = genre.Split('|');
-                    string item = parts[3].Split(':')[1];
+                    string item = parts[4].Split(':')[1];
 
                     if (!cboGenre.Items.Contains(item))
                     {
@@ -152,7 +215,7 @@ namespace GameStore
                         break;
 
                     string[] parts = platform.Split('|');
-                    string item = parts[4].Split(':')[1];
+                    string item = parts[5].Split(':')[1];
 
                     if (!cboPlatform.Items.Contains(item))
                     {
@@ -180,7 +243,7 @@ namespace GameStore
                         break;
 
                     string[] parts = region.Split('|');
-                    string item = parts[5].Split(':')[1];
+                    string item = parts[6].Split(':')[1];
 
                     if (!cboRegion.Items.Contains(item))
                     {
@@ -209,7 +272,7 @@ namespace GameStore
                         break;
 
                     string[] parts = price.Split('|');
-                    string item = parts[6].Split(':')[1];
+                    string item = parts[7].Split(':')[1];
 
                     if (!cboPrice.Items.Contains(item))
                     {

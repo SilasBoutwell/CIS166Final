@@ -13,6 +13,7 @@ namespace GameStore
     {
 
         //Properties
+        public string TimeStamp { get; set; }
         public string Title { get; set; }
         public string Developer { get; set; }
         public string Publisher { get; set; }
@@ -22,8 +23,9 @@ namespace GameStore
         public decimal Price { get; set; }
 
         //Constructor
-        public Game(string title, string developer, string publisher, string genre, string platform, string region, decimal price)
+        public Game(string timestamp, string title, string developer, string publisher, string genre, string platform, string region, decimal price)
         {
+            this.TimeStamp = timestamp;
             this.Title = title;
             this.Developer = developer;
             this.Publisher = publisher;
@@ -35,7 +37,7 @@ namespace GameStore
         //Override ToString method to display game information
         public override string ToString()
         {
-            return $"Title: {Title}|Developer: {Developer}|Publisher: {Publisher}|Genre: {Genre}|Platform: {Platform}|Region: {Region}|Price: ${Price}";
+            return $"{TimeStamp}|Title: {Title}|Developer: {Developer}|Publisher: {Publisher}|Genre: {Genre}|Platform: {Platform}|Region: {Region}|Price: ${Price}";
         }
     }
 }

@@ -56,22 +56,23 @@ namespace GameStore
         {
             var parts = gameStr.Split('|');
 
-            if (parts.Length != 7)
+            if (parts.Length != 8)
                 return null;
 
-            string title = GetValue(parts[0]);
-            string developer = GetValue(parts[1]);
-            string publisher = GetValue(parts[2]);
-            string genre = GetValue(parts[3]);
-            string platform = GetValue(parts[4]);
-            string region = GetValue(parts[5]);
-            string priceStr = GetValue(parts[6]).Replace("$", "").Trim();
+            string timestamp = parts[0].Trim();
+            string title = GetValue(parts[1]);
+            string developer = GetValue(parts[2]);
+            string publisher = GetValue(parts[3]);
+            string genre = GetValue(parts[4]);
+            string platform = GetValue(parts[5]);
+            string region = GetValue(parts[6]);
+            string priceStr = GetValue(parts[7]).Replace("$", "").Trim();
 
             decimal price;
             if (!decimal.TryParse(priceStr, out price))
                 return null;
 
-            return new Game(title, developer, publisher, genre, platform, region, price);
+            return new Game(timestamp, title, developer, publisher, genre, platform, region, price);
         }
 
         private string GetValue(string part)
