@@ -21,6 +21,13 @@ namespace GameStore
             LoadGamesFromFile();
             UpdateTextBox();
             cboPriceFilter.SelectedIndex = 0;
+
+            User user = new User("admin", "admin@gamestore.com", "ssdf&($ijfdse#as");
+            string encryptedUser = user.ToString();
+            string decryptedUser = user.Decrypt(encryptedUser);
+            Console.WriteLine("original user: " + user.Username + ", " + user.Email + ", " + user.Password);
+            Console.WriteLine($"Encrypted: {encryptedUser}");
+            Console.WriteLine($"Decrypted: {decryptedUser}");
         }
 
         private ItemList<Game> gameList = new ItemList<Game>();
