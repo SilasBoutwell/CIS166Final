@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameStore.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -71,6 +72,17 @@ namespace GameStore
             IsUserLoggedIn = false;
             MessageBox.Show("You have been signed out.");
             this.Close();
+        }
+
+        private void btnDeleteAccount_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to delete your account?", "Delete Account", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                UserDB.DeleteUser(LoggedInUser.Current.Username);
+                LoggedInUser.Logout();
+                MessageBox.Show("Your account has been deleted.");
+                this.Close();
+            }
         }
 
 

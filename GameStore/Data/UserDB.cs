@@ -18,6 +18,24 @@ namespace GameStore.Data
             sw.Close();
         }
 
+        public static void DeleteUser(string username)
+        {
+            // Read all users
+            var lines = File.ReadAllLines(UserPath).ToList();
+
+            // Remove the user with the matching username
+            lines = lines
+                .Where(line =>
+                {
+                    var parts = line.Split('|');
+                    return parts.Length > 0 && !string.Equals(parts[0], username, StringComparison.OrdinalIgnoreCase);
+                })
+                .ToList();
+
+            // Write the updated list back to the file
+            File.WriteAllLines(UserPath, lines);
+        }
+
         public User GetUserByUsername(string username)
         {
             StreamReader sr = new StreamReader(new FileStream(UserPath, FileMode.Open, FileAccess.Read));

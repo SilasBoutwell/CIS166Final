@@ -46,6 +46,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnComment = new System.Windows.Forms.Button();
             this.btnSignOut = new System.Windows.Forms.Button();
+            this.btnDeleteAccount = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cboPrice
@@ -54,7 +55,7 @@
             this.cboPrice.FormattingEnabled = true;
             this.cboPrice.Location = new System.Drawing.Point(129, 218);
             this.cboPrice.Name = "cboPrice";
-            this.cboPrice.Size = new System.Drawing.Size(224, 24);
+            this.cboPrice.Size = new System.Drawing.Size(242, 24);
             this.cboPrice.TabIndex = 9;
             // 
             // cboPlatform
@@ -63,7 +64,7 @@
             this.cboPlatform.FormattingEnabled = true;
             this.cboPlatform.Location = new System.Drawing.Point(129, 160);
             this.cboPlatform.Name = "cboPlatform";
-            this.cboPlatform.Size = new System.Drawing.Size(224, 24);
+            this.cboPlatform.Size = new System.Drawing.Size(242, 24);
             this.cboPlatform.TabIndex = 7;
             this.cboPlatform.SelectedIndexChanged += new System.EventHandler(this.cboPlatform_SelectedIndexChanged);
             // 
@@ -73,7 +74,7 @@
             this.cboGenre.FormattingEnabled = true;
             this.cboGenre.Location = new System.Drawing.Point(129, 132);
             this.cboGenre.Name = "cboGenre";
-            this.cboGenre.Size = new System.Drawing.Size(224, 24);
+            this.cboGenre.Size = new System.Drawing.Size(242, 24);
             this.cboGenre.TabIndex = 6;
             this.cboGenre.SelectedIndexChanged += new System.EventHandler(this.cboGenre_SelectedIndexChanged);
             // 
@@ -83,7 +84,7 @@
             this.cboPublisher.FormattingEnabled = true;
             this.cboPublisher.Location = new System.Drawing.Point(129, 105);
             this.cboPublisher.Name = "cboPublisher";
-            this.cboPublisher.Size = new System.Drawing.Size(224, 24);
+            this.cboPublisher.Size = new System.Drawing.Size(242, 24);
             this.cboPublisher.TabIndex = 5;
             this.cboPublisher.SelectedIndexChanged += new System.EventHandler(this.cboPublisher_SelectedIndexChanged);
             // 
@@ -93,7 +94,7 @@
             this.cboDeveloper.FormattingEnabled = true;
             this.cboDeveloper.Location = new System.Drawing.Point(129, 77);
             this.cboDeveloper.Name = "cboDeveloper";
-            this.cboDeveloper.Size = new System.Drawing.Size(224, 24);
+            this.cboDeveloper.Size = new System.Drawing.Size(242, 24);
             this.cboDeveloper.TabIndex = 4;
             this.cboDeveloper.SelectedIndexChanged += new System.EventHandler(this.cboDeveloper_SelectedIndexChanged);
             // 
@@ -103,7 +104,7 @@
             this.cboTitle.FormattingEnabled = true;
             this.cboTitle.Location = new System.Drawing.Point(129, 49);
             this.cboTitle.Name = "cboTitle";
-            this.cboTitle.Size = new System.Drawing.Size(224, 24);
+            this.cboTitle.Size = new System.Drawing.Size(242, 24);
             this.cboTitle.TabIndex = 3;
             this.cboTitle.SelectedIndexChanged += new System.EventHandler(this.cboTitle_SelectedIndexChanged);
             // 
@@ -122,7 +123,7 @@
             this.cboRegion.FormattingEnabled = true;
             this.cboRegion.Location = new System.Drawing.Point(129, 188);
             this.cboRegion.Name = "cboRegion";
-            this.cboRegion.Size = new System.Drawing.Size(224, 24);
+            this.cboRegion.Size = new System.Drawing.Size(242, 24);
             this.cboRegion.TabIndex = 8;
             this.cboRegion.SelectedIndexChanged += new System.EventHandler(this.cboRegion_SelectedIndexChanged);
             // 
@@ -182,7 +183,7 @@
             // 
             // rchCommentDisplay
             // 
-            this.rchCommentDisplay.Location = new System.Drawing.Point(377, 49);
+            this.rchCommentDisplay.Location = new System.Drawing.Point(398, 49);
             this.rchCommentDisplay.Name = "rchCommentDisplay";
             this.rchCommentDisplay.Size = new System.Drawing.Size(224, 193);
             this.rchCommentDisplay.TabIndex = 0;
@@ -191,7 +192,7 @@
             // btnExit
             // 
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExit.Location = new System.Drawing.Point(264, 264);
+            this.btnExit.Location = new System.Drawing.Point(282, 264);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(89, 26);
             this.btnExit.TabIndex = 2;
@@ -201,7 +202,7 @@
             // 
             // btnComment
             // 
-            this.btnComment.Location = new System.Drawing.Point(512, 264);
+            this.btnComment.Location = new System.Drawing.Point(533, 264);
             this.btnComment.Name = "btnComment";
             this.btnComment.Size = new System.Drawing.Size(89, 26);
             this.btnComment.TabIndex = 1;
@@ -210,7 +211,7 @@
             // 
             // btnSignOut
             // 
-            this.btnSignOut.Location = new System.Drawing.Point(157, 264);
+            this.btnSignOut.Location = new System.Drawing.Point(47, 264);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.Size = new System.Drawing.Size(89, 26);
             this.btnSignOut.TabIndex = 46;
@@ -218,13 +219,24 @@
             this.btnSignOut.UseVisualStyleBackColor = true;
             this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
             // 
+            // btnDeleteAccount
+            // 
+            this.btnDeleteAccount.Location = new System.Drawing.Point(142, 264);
+            this.btnDeleteAccount.Name = "btnDeleteAccount";
+            this.btnDeleteAccount.Size = new System.Drawing.Size(134, 26);
+            this.btnDeleteAccount.TabIndex = 47;
+            this.btnDeleteAccount.Text = "Delete Account";
+            this.btnDeleteAccount.UseVisualStyleBackColor = true;
+            this.btnDeleteAccount.Click += new System.EventHandler(this.btnDeleteAccount_Click);
+            // 
             // frmComments
             // 
             this.AcceptButton = this.btnComment;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
-            this.ClientSize = new System.Drawing.Size(655, 321);
+            this.ClientSize = new System.Drawing.Size(665, 321);
+            this.Controls.Add(this.btnDeleteAccount);
             this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.btnComment);
             this.Controls.Add(this.btnExit);
@@ -270,5 +282,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnComment;
         private System.Windows.Forms.Button btnSignOut;
+        private System.Windows.Forms.Button btnDeleteAccount;
     }
 }
