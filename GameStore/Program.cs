@@ -16,6 +16,10 @@ namespace GameStore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            // Attempt to auto-login the last user
+            GameStore.LoggedInUser.TryAutoLogin();
+
             Application.Run(new frmGameStore());
         }
     }

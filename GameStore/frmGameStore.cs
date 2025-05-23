@@ -21,13 +21,6 @@ namespace GameStore
             LoadGamesFromFile();
             UpdateTextBox();
             cboPriceFilter.SelectedIndex = 0;
-
-            User user = new User("admin", "admin@gamestore.com", "ssdf&($ijfdse#as");
-            string encryptedUser = user.ToString();
-            string decryptedUser = user.Decrypt(encryptedUser);
-            Console.WriteLine("original user: " + user.Username + ", " + user.Email + ", " + user.Password);
-            Console.WriteLine($"Encrypted: {encryptedUser}");
-            Console.WriteLine($"Decrypted: {decryptedUser}");
         }
 
         private ItemList<Game> gameList = new ItemList<Game>();
@@ -180,6 +173,22 @@ namespace GameStore
             foreach (var game in filteredGames)
             {
                 rchGameInventory.AppendText(FormatGameForDisplay(game) + Environment.NewLine + Environment.NewLine);
+            }
+        }
+
+        private void btnComments_Click(object sender, EventArgs e)
+        {
+            using (var comments = new frmComments())
+            {
+                if (!comments.IsUserLoggedIn)
+                {
+                    return; // Do not proceed if the user is not logged in
+                }
+
+                if (comments.ShowDialog() == DialogResult.OK)
+                {
+                    // Handle any actions after comments are submitted, if necessary
+                }
             }
         }
     }

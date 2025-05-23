@@ -36,6 +36,7 @@
             this.btnViewAll = new System.Windows.Forms.Button();
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.cboPriceFilter = new System.Windows.Forms.ComboBox();
+            this.btnComments = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // rchGameInventory
@@ -50,17 +51,17 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(422, 302);
+            this.btnExit.Location = new System.Drawing.Point(426, 302);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(83, 27);
-            this.btnExit.TabIndex = 3;
+            this.btnExit.TabIndex = 4;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(422, 191);
+            this.btnAdd.Location = new System.Drawing.Point(426, 150);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(83, 27);
             this.btnAdd.TabIndex = 0;
@@ -79,20 +80,20 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(422, 265);
+            this.btnDelete.Location = new System.Drawing.Point(426, 226);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(83, 27);
-            this.btnDelete.TabIndex = 1;
+            this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnViewAll
             // 
-            this.btnViewAll.Location = new System.Drawing.Point(422, 228);
+            this.btnViewAll.Location = new System.Drawing.Point(426, 188);
             this.btnViewAll.Name = "btnViewAll";
             this.btnViewAll.Size = new System.Drawing.Size(83, 27);
-            this.btnViewAll.TabIndex = 2;
+            this.btnViewAll.TabIndex = 1;
             this.btnViewAll.Text = "View All";
             this.btnViewAll.UseVisualStyleBackColor = true;
             this.btnViewAll.Click += new System.EventHandler(this.btnViewAll_Click);
@@ -102,7 +103,7 @@
             this.txtFilter.Location = new System.Drawing.Point(93, 45);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(171, 22);
-            this.txtFilter.TabIndex = 4;
+            this.txtFilter.TabIndex = 5;
             this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
             // 
             // cboPriceFilter
@@ -118,14 +119,25 @@
             this.cboPriceFilter.Location = new System.Drawing.Point(270, 43);
             this.cboPriceFilter.Name = "cboPriceFilter";
             this.cboPriceFilter.Size = new System.Drawing.Size(133, 24);
-            this.cboPriceFilter.TabIndex = 5;
+            this.cboPriceFilter.TabIndex = 6;
             this.cboPriceFilter.SelectedIndexChanged += new System.EventHandler(this.cboPriceFilter_SelectedIndexChanged);
+            // 
+            // btnComments
+            // 
+            this.btnComments.Location = new System.Drawing.Point(426, 264);
+            this.btnComments.Name = "btnComments";
+            this.btnComments.Size = new System.Drawing.Size(83, 27);
+            this.btnComments.TabIndex = 3;
+            this.btnComments.Text = "Comments";
+            this.btnComments.UseVisualStyleBackColor = true;
+            this.btnComments.Click += new System.EventHandler(this.btnComments_Click);
             // 
             // frmGameStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(555, 371);
+            this.Controls.Add(this.btnComments);
             this.Controls.Add(this.cboPriceFilter);
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.btnViewAll);
@@ -152,6 +164,7 @@
         private System.Windows.Forms.Button btnViewAll;
         private System.Windows.Forms.TextBox txtFilter;
         private System.Windows.Forms.ComboBox cboPriceFilter;
+        private System.Windows.Forms.Button btnComments;
     }
 }
 

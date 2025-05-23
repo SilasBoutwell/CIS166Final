@@ -49,11 +49,23 @@
     <Compile Include="Data\GameDB.cs" />
     <Compile Include="Data\UserDB.cs" />
     <Compile Include="DeleteGameFilter.cs" />
+    <Compile Include="frmComments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmComments.Designer.cs">
+      <DependentUpon>frmComments.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDeleteGame.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDeleteGame.Designer.cs">
       <DependentUpon>frmDeleteGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNewGame.cs">
       <SubType>Form</SubType>
@@ -70,16 +82,23 @@
     <Compile Include="Game.cs" />
     <Compile Include="GameList.cs" />
     <Compile Include="IFilter.cs" />
+    <Compile Include="LoggedInUser.cs" />
     <Compile Include="PriceRangeFilter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchGameFilter.cs" />
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="frmComments.resx">
+      <DependentUpon>frmComments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDeleteGame.resx">
       <DependentUpon>frmDeleteGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGameStore.resx">
       <DependentUpon>frmGameStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNewGame.resx">
       <DependentUpon>frmNewGame.cs</DependentUpon>

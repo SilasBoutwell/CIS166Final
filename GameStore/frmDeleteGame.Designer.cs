@@ -223,7 +223,7 @@
             this.Controls.Add(this.lblDeveloper);
             this.Controls.Add(this.lblTitle);
             this.Name = "frmDeleteGame";
-            this.Text = "frmDeleteGame";
+            this.Text = "DeleteGame";
             this.ResumeLayout(false);
             this.PerformLayout();
 
