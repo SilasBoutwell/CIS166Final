@@ -19,6 +19,8 @@ namespace GameStore
         {
             InitializeComponent();
 
+            pnlComments.AutoScroll = true;
+
             // Populate game titles
             string[] games = System.IO.File.ReadAllText("../../Data/Games.txt").ToString().Split('\n');
             foreach (string game in games)
@@ -59,6 +61,9 @@ namespace GameStore
                 IsUserLoggedIn = true;
                 MessageBox.Show("Welcome to the comments " + LoggedInUser.Current.Username + "!");
             }
+
+            // Load comments for the selected game
+            LoadComments();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -85,8 +90,214 @@ namespace GameStore
             }
         }
 
+        private void LoadComments()
+        {
+            pnlComments.Controls.Clear();
 
+            string[] games = System.IO.File.ReadAllText("../../Data/Games.txt").Split('\n');
+            string timeStamp = null;
 
+            // Normalize user input for comparison
+            string selectedTitle = cboTitle.Text.Trim();
+            string selectedDeveloper = cboDeveloper.Text.Trim();
+            string selectedPublisher = cboPublisher.Text.Trim();
+            string selectedGenre = cboGenre.Text.Trim();
+            string selectedPlatform = cboPlatform.Text.Trim();
+            string selectedRegion = cboRegion.Text.Trim();
+            string selectedPriceStr = cboPrice.Text.Replace("$", "").Trim();
+            decimal selectedPrice;
+            if (!decimal.TryParse(selectedPriceStr, out selectedPrice))
+            {
+                MessageBox.Show("Invalid price format.", "Error");
+                return;
+            }
+
+            // Find the matching game entry
+            foreach (string gameLine in games)
+            {
+                if (string.IsNullOrWhiteSpace(gameLine))
+                    continue;
+
+                string[] parts = gameLine.Split('|');
+                if (parts.Length < 8)
+                    continue;
+
+                string title = parts[1].Split(':')[1].Trim();
+                string developer = parts[2].Split(':')[1].Trim();
+                string publisher = parts[3].Split(':')[1].Trim();
+                string genre = parts[4].Split(':')[1].Trim();
+                string platform = parts[5].Split(':')[1].Trim();
+                string region = parts[6].Split(':')[1].Trim();
+                string priceStr = parts[7].Split(':')[1].Replace("$", "").Trim();
+                decimal price;
+                if (!decimal.TryParse(priceStr, out price))
+                    continue;
+
+                if (string.Equals(title, selectedTitle, StringComparison.OrdinalIgnoreCase) &&
+                    string.Equals(developer, selectedDeveloper, StringComparison.OrdinalIgnoreCase) &&
+                    string.Equals(publisher, selectedPublisher, StringComparison.OrdinalIgnoreCase) &&
+                    string.Equals(genre, selectedGenre, StringComparison.OrdinalIgnoreCase) &&
+                    string.Equals(platform, selectedPlatform, StringComparison.OrdinalIgnoreCase) &&
+                    string.Equals(region, selectedRegion, StringComparison.OrdinalIgnoreCase) &&
+                    price == selectedPrice)
+                {
+                    timeStamp = parts[0].Trim();
+                    break;
+                }
+            }
+
+            if (timeStamp == null)
+            {
+                MessageBox.Show("Could not find the selected game. Please check your selections.", "Error");
+                return;
+            }
+
+            // Construct the selected Game object
+            var selectedGame = new Game(
+                timeStamp,
+                cboTitle.Text.Trim(),
+                cboDeveloper.Text.Trim(),
+                cboPublisher.Text.Trim(),
+                cboGenre.Text.Trim(),
+                cboPlatform.Text.Trim(),
+                cboRegion.Text.Trim(),
+                selectedPrice
+            );
+
+            var selectedGameString = selectedGame.ToString();
+
+            // Get comments for the selected game
+            var comments = CommentsDB.GetAllComments()
+                .Where(c => CommentsDB.AreGamesEqual(c.Game, selectedGame))
+                .ToList();
+
+            int y = 10;
+            foreach (var comment in comments.OrderBy(c => c.DatePosted))
+            {
+                string displayText = $"{comment.DatePosted:MM-dd-yyyy HH:mm} {comment.Username}: {comment.Text}";
+
+                Label lbl = new Label();
+                lbl.Text = displayText;
+                lbl.AutoSize = false;
+                lbl.Width = pnlComments.Width - 40;
+                lbl.MaximumSize = new Size(pnlComments.Width - 40, 0);
+                lbl.TextAlign = ContentAlignment.TopLeft;
+                lbl.BackColor = comment.Username == LoggedInUser.Current.Username ? Color.LightBlue : Color.LightGray;
+                lbl.Padding = new Padding(8);
+                lbl.Font = new Font("Segoe UI", 8);
+
+                // Calculate height for wrapped text
+                lbl.Height = TextRenderer.MeasureText(lbl.Text, lbl.Font, new Size(lbl.Width, int.MaxValue), TextFormatFlags.WordBreak).Height + 16;
+
+                // Align right for current user, left for others
+                if (comment.Username == LoggedInUser.Current.Username)
+                {
+                    lbl.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+                    lbl.Left = pnlComments.Width - lbl.Width - 20;
+                }
+                else
+                {
+                    lbl.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+                    lbl.Left = 10;
+                }
+
+                lbl.Top = y;
+                pnlComments.Controls.Add(lbl);
+                y += lbl.Height + 10;
+            }
+        }
+
+        private void btnComment_Click(object sender, EventArgs e)
+        {
+            string commentText = txtComment.Text.Trim();
+            if (string.IsNullOrEmpty(commentText))
+            {
+                MessageBox.Show("Please enter a comment.");
+                return;
+            }
+
+            // Construct the selected Game object (reuse your logic from LoadComments)
+            string[] games = System.IO.File.ReadAllText("../../Data/Games.txt").Split('\n');
+            string timeStamp = null;
+
+            string selectedTitle = cboTitle.Text.Trim();
+            string selectedDeveloper = cboDeveloper.Text.Trim();
+            string selectedPublisher = cboPublisher.Text.Trim();
+            string selectedGenre = cboGenre.Text.Trim();
+            string selectedPlatform = cboPlatform.Text.Trim();
+            string selectedRegion = cboRegion.Text.Trim();
+            string selectedPriceStr = cboPrice.Text.Replace("$", "").Trim();
+            decimal selectedPrice;
+            if (!decimal.TryParse(selectedPriceStr, out selectedPrice))
+            {
+                MessageBox.Show("Invalid price format.", "Error");
+                return;
+            }
+
+            foreach (string gameLine in games)
+            {
+                if (string.IsNullOrWhiteSpace(gameLine))
+                    continue;
+
+                string[] parts = gameLine.Split('|');
+                if (parts.Length < 8)
+                    continue;
+
+                string title = parts[1].Split(':')[1].Trim();
+                string developer = parts[2].Split(':')[1].Trim();
+                string publisher = parts[3].Split(':')[1].Trim();
+                string genre = parts[4].Split(':')[1].Trim();
+                string platform = parts[5].Split(':')[1].Trim();
+                string region = parts[6].Split(':')[1].Trim();
+                string priceStr = parts[7].Split(':')[1].Replace("$", "").Trim();
+                decimal price;
+                if (!decimal.TryParse(priceStr, out price))
+                    continue;
+
+                if (string.Equals(title, selectedTitle, StringComparison.OrdinalIgnoreCase) &&
+                    string.Equals(developer, selectedDeveloper, StringComparison.OrdinalIgnoreCase) &&
+                    string.Equals(publisher, selectedPublisher, StringComparison.OrdinalIgnoreCase) &&
+                    string.Equals(genre, selectedGenre, StringComparison.OrdinalIgnoreCase) &&
+                    string.Equals(platform, selectedPlatform, StringComparison.OrdinalIgnoreCase) &&
+                    string.Equals(region, selectedRegion, StringComparison.OrdinalIgnoreCase) &&
+                    price == selectedPrice)
+                {
+                    timeStamp = parts[0].Trim();
+                    break;
+                }
+            }
+
+            var selectedGame = new Game(
+                timeStamp,
+                cboTitle.Text.Trim(),
+                cboDeveloper.Text.Trim(),
+                cboPublisher.Text.Trim(),
+                cboGenre.Text.Trim(),
+                cboPlatform.Text.Trim(),
+                cboRegion.Text.Trim(),
+                selectedPrice
+            );
+
+            var selectedGameString = selectedGame.ToString();
+
+            var comments = CommentsDB.GetAllComments()
+                .Where(c => CommentsDB.AreGamesEqual(c.Game, selectedGame))
+                .ToList();
+
+            // Create and add the comment
+            var comment = new Comment(
+                LoggedInUser.Current.Username,
+                selectedGame,
+                commentText,
+                DateTime.Now
+            );
+
+            CommentsDB.AddComment(comment);
+
+            // Refresh comments and clear input
+            LoadComments();
+            txtComment.Text = "";
+        }
 
         //*****
         //Following code is to populate the combo boxes
@@ -114,6 +325,9 @@ namespace GameStore
             }
             if (cboDeveloper.Items.Count > 0)
                 cboDeveloper.SelectedIndex = 0;
+
+            // Load comments
+            LoadComments();
         }
 
         private void cboDeveloper_SelectedIndexChanged(object sender, EventArgs e)
@@ -138,6 +352,9 @@ namespace GameStore
             }
             if (cboPublisher.Items.Count > 0)
                 cboPublisher.SelectedIndex = 0;
+
+            // Load comments
+            LoadComments();
         }
 
         private void cboPublisher_SelectedIndexChanged(object sender, EventArgs e)
@@ -164,6 +381,9 @@ namespace GameStore
             }
             if (cboGenre.Items.Count > 0)
                 cboGenre.SelectedIndex = 0;
+
+            // Load comments
+            LoadComments();
         }
 
         private void cboGenre_SelectedIndexChanged(object sender, EventArgs e)
@@ -191,6 +411,9 @@ namespace GameStore
             }
             if (cboPlatform.Items.Count > 0)
                 cboPlatform.SelectedIndex = 0;
+
+            // Load comments
+            LoadComments();
         }
 
         private void cboPlatform_SelectedIndexChanged(object sender, EventArgs e)
@@ -219,6 +442,9 @@ namespace GameStore
             }
             if (cboRegion.Items.Count > 0)
                 cboRegion.SelectedIndex = 0;
+
+            // Load comments
+            LoadComments();
         }
 
         private void cboRegion_SelectedIndexChanged(object sender, EventArgs e)
@@ -248,6 +474,9 @@ namespace GameStore
             }
             if (cboPrice.Items.Count > 0)
                 cboPrice.SelectedIndex = 0;
+
+            // Load comments
+            LoadComments();
         }
     }
 }

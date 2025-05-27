@@ -42,11 +42,14 @@
             this.lblPublisher = new System.Windows.Forms.Label();
             this.lblDeveloper = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.rchCommentDisplay = new System.Windows.Forms.RichTextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnComment = new System.Windows.Forms.Button();
             this.btnSignOut = new System.Windows.Forms.Button();
             this.btnDeleteAccount = new System.Windows.Forms.Button();
+            this.pnlComments = new System.Windows.Forms.Panel();
+            this.txtComment = new System.Windows.Forms.TextBox();
+            this.grpComments = new System.Windows.Forms.GroupBox();
+            this.grpComments.SuspendLayout();
             this.SuspendLayout();
             // 
             // cboPrice
@@ -181,14 +184,6 @@
             this.lblTitle.TabIndex = 38;
             this.lblTitle.Text = "Title:";
             // 
-            // rchCommentDisplay
-            // 
-            this.rchCommentDisplay.Location = new System.Drawing.Point(398, 49);
-            this.rchCommentDisplay.Name = "rchCommentDisplay";
-            this.rchCommentDisplay.Size = new System.Drawing.Size(224, 193);
-            this.rchCommentDisplay.TabIndex = 0;
-            this.rchCommentDisplay.Text = "";
-            // 
             // btnExit
             // 
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
@@ -202,12 +197,13 @@
             // 
             // btnComment
             // 
-            this.btnComment.Location = new System.Drawing.Point(533, 264);
+            this.btnComment.Location = new System.Drawing.Point(635, 264);
             this.btnComment.Name = "btnComment";
             this.btnComment.Size = new System.Drawing.Size(89, 26);
             this.btnComment.TabIndex = 1;
             this.btnComment.Text = "Comment";
             this.btnComment.UseVisualStyleBackColor = true;
+            this.btnComment.Click += new System.EventHandler(this.btnComment_Click);
             // 
             // btnSignOut
             // 
@@ -229,18 +225,43 @@
             this.btnDeleteAccount.UseVisualStyleBackColor = true;
             this.btnDeleteAccount.Click += new System.EventHandler(this.btnDeleteAccount_Click);
             // 
+            // pnlComments
+            // 
+            this.pnlComments.Location = new System.Drawing.Point(6, 21);
+            this.pnlComments.Name = "pnlComments";
+            this.pnlComments.Size = new System.Drawing.Size(320, 136);
+            this.pnlComments.TabIndex = 48;
+            // 
+            // txtComment
+            // 
+            this.txtComment.Location = new System.Drawing.Point(398, 219);
+            this.txtComment.Name = "txtComment";
+            this.txtComment.Size = new System.Drawing.Size(332, 22);
+            this.txtComment.TabIndex = 49;
+            // 
+            // grpComments
+            // 
+            this.grpComments.Controls.Add(this.pnlComments);
+            this.grpComments.Location = new System.Drawing.Point(398, 49);
+            this.grpComments.Name = "grpComments";
+            this.grpComments.Size = new System.Drawing.Size(332, 163);
+            this.grpComments.TabIndex = 50;
+            this.grpComments.TabStop = false;
+            this.grpComments.Text = "Comments";
+            // 
             // frmComments
             // 
             this.AcceptButton = this.btnComment;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
-            this.ClientSize = new System.Drawing.Size(665, 321);
+            this.ClientSize = new System.Drawing.Size(779, 334);
+            this.Controls.Add(this.grpComments);
+            this.Controls.Add(this.txtComment);
             this.Controls.Add(this.btnDeleteAccount);
             this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.btnComment);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.rchCommentDisplay);
             this.Controls.Add(this.cboPrice);
             this.Controls.Add(this.cboPlatform);
             this.Controls.Add(this.cboGenre);
@@ -257,6 +278,7 @@
             this.Controls.Add(this.lblTitle);
             this.Name = "frmComments";
             this.Text = "Comments";
+            this.grpComments.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,10 +300,12 @@
         private System.Windows.Forms.Label lblPublisher;
         private System.Windows.Forms.Label lblDeveloper;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.RichTextBox rchCommentDisplay;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnComment;
         private System.Windows.Forms.Button btnSignOut;
         private System.Windows.Forms.Button btnDeleteAccount;
+        private System.Windows.Forms.Panel pnlComments;
+        private System.Windows.Forms.TextBox txtComment;
+        private System.Windows.Forms.GroupBox grpComments;
     }
 }

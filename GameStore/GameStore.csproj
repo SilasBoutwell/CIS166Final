@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comment.cs" />
+    <Compile Include="Data\CommentsDB.cs" />
     <Compile Include="Data\GameDB.cs" />
     <Compile Include="Data\UserDB.cs" />
     <Compile Include="DeleteGameFilter.cs" />
@@ -126,6 +128,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Data\Comments.txt" />
     <Content Include="Data\Games.txt" />
     <Content Include="Data\Users.txt" />
   </ItemGroup>
