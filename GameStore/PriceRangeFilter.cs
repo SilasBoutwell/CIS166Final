@@ -9,7 +9,7 @@ namespace GameStore
     /// <summary>
     /// Implements IFilter interface to filter games based on their price range.
     /// </summary>
-    public class PriceRangeFilter : IFilter<Game>
+    public class PriceRangeFilter : IFilter<IGame>
     {
         private readonly decimal? min;
         private readonly decimal? max;
@@ -45,17 +45,11 @@ namespace GameStore
             }
         }
 
-        public bool IsMatch(Game game)
+        public bool IsMatch(IGame game)
         {
-            if (min == null && max == null)
-                return true; // No filter
-
-            if (min != null && max != null)
-                return game.Price >= min && game.Price <= max;
-            if (min != null)
-                return game.Price >= min;
-            if (max != null)
-                return game.Price <= max;
+            if (!min.HasValue && !max.HasValue) return true;
+            if (min.HasValue && game.Price < min.Value) return false;
+            if (max.HasValue && game.Price > max.Value) return false;
             return true;
         }
     }

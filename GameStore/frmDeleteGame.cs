@@ -99,16 +99,28 @@ namespace GameStore
             }
 
             // Create the Game object with the timestamp
-            Game game = new Game(
-                timeStamp,
-                cboTitle.Text,
-                cboDeveloper.Text,
-                cboPublisher.Text,
-                cboGenre.Text,
-                cboPlatform.Text,
-                cboRegion.Text,
-                selectedPrice
-            );
+            IGame game;
+            switch (cboRegion.Text.Trim())
+            {
+                case "Europe":
+                    game = new Regions.Europe(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    break;
+                case "North America":
+                    game = new Regions.NorthAmerica(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    break;
+                case "Japan":
+                    game = new Regions.Japan(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    break;
+                case "Korea":
+                    game = new Regions.Korea(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    break;
+                case "Asia":
+                    game = new Regions.Asia(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    break;
+                default:
+                    MessageBox.Show("Unknown region", "Error");
+                    return;
+            }
 
             this.Tag = game;
             this.DialogResult = DialogResult.OK;

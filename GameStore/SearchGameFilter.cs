@@ -9,27 +9,24 @@ namespace GameStore
     /// <summary>
     /// Checks if a game matches the search term.
     /// </summary>
-    public class SearchGameFilter : IFilter<Game>
+    public class SearchGameFilter : IFilter<IGame>
     {
         private readonly string _searchTerm;
 
         public SearchGameFilter(string searchTerm)
         {
-            _searchTerm = searchTerm?.ToLower() ?? string.Empty;
+            _searchTerm = searchTerm?.ToLowerInvariant() ?? "";
         }
 
-        public bool IsMatch(Game game)
+        public bool IsMatch(IGame game)
         {
-            if (string.IsNullOrEmpty(_searchTerm) || game == null)
-                return false;
-
-            return (game.Title?.ToLower().Contains(_searchTerm) ?? false)
-                || (game.Developer?.ToLower().Contains(_searchTerm) ?? false)
-                || (game.Publisher?.ToLower().Contains(_searchTerm) ?? false)
-                || (game.Genre?.ToLower().Contains(_searchTerm) ?? false)
-                || (game.Platform?.ToLower().Contains(_searchTerm) ?? false)
-                || (game.Region?.ToLower().Contains(_searchTerm) ?? false)
-                || (game.Price.ToString("0.##").Contains(_searchTerm));
+            if (string.IsNullOrWhiteSpace(_searchTerm)) return true;
+            return (game.Title?.ToLowerInvariant().Contains(_searchTerm) ?? false)
+                || (game.Developer?.ToLowerInvariant().Contains(_searchTerm) ?? false)
+                || (game.Publisher?.ToLowerInvariant().Contains(_searchTerm) ?? false)
+                || (game.Genre?.ToLowerInvariant().Contains(_searchTerm) ?? false)
+                || (game.Platform?.ToLowerInvariant().Contains(_searchTerm) ?? false)
+                || (game.Region?.ToLowerInvariant().Contains(_searchTerm) ?? false);
         }
     }
 }

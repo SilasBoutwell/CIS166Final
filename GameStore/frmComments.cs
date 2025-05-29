@@ -141,7 +141,7 @@ namespace GameStore
                     string.Equals(region, selectedRegion, StringComparison.OrdinalIgnoreCase) &&
                     price == selectedPrice)
                 {
-                    timeStamp = parts[0].Trim();
+                    timeStamp = parts[0];
                     break;
                 }
             }
@@ -153,16 +153,28 @@ namespace GameStore
             }
 
             // Construct the selected Game object
-            var selectedGame = new Game(
-                timeStamp,
-                cboTitle.Text.Trim(),
-                cboDeveloper.Text.Trim(),
-                cboPublisher.Text.Trim(),
-                cboGenre.Text.Trim(),
-                cboPlatform.Text.Trim(),
-                cboRegion.Text.Trim(),
-                selectedPrice
-            );
+            IGame selectedGame;
+            switch (cboRegion.Text.Trim())
+            {
+                case "Europe":
+                    selectedGame = new GameStore.Regions.Europe(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    break;
+                case "North America":
+                    selectedGame = new GameStore.Regions.NorthAmerica(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    break;
+                case "Japan":
+                    selectedGame = new GameStore.Regions.Japan(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    break;
+                case "Korea":
+                    selectedGame = new GameStore.Regions.Korea(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    break;
+                case "Asia":
+                    selectedGame = new GameStore.Regions.Asia(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    break;
+                default:
+                    MessageBox.Show("Invalid region selection.", "Error");
+                    return;
+            }
 
             var selectedGameString = selectedGame.ToString();
 
@@ -174,7 +186,7 @@ namespace GameStore
             int y = 10;
             foreach (var comment in comments.OrderBy(c => c.DatePosted))
             {
-                string displayText = $"{comment.DatePosted:MM-dd-yyyy HH:mm} {comment.Username}: {comment.Text}";
+                string displayText = $"{comment.DatePosted:MM-dd-yyyy HH:mm} {comment.Username}:\n{comment.Text}";
 
                 Label lbl = new Label();
                 lbl.Text = displayText;
@@ -267,16 +279,28 @@ namespace GameStore
                 }
             }
 
-            var selectedGame = new Game(
-                timeStamp,
-                cboTitle.Text.Trim(),
-                cboDeveloper.Text.Trim(),
-                cboPublisher.Text.Trim(),
-                cboGenre.Text.Trim(),
-                cboPlatform.Text.Trim(),
-                cboRegion.Text.Trim(),
-                selectedPrice
-            );
+            IGame selectedGame;
+            switch (cboRegion.Text.Trim())
+            {
+                case "Europe":
+                    selectedGame = new GameStore.Regions.Europe(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    break;
+                case "North America":
+                    selectedGame = new GameStore.Regions.NorthAmerica(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    break;
+                case "Japan":
+                    selectedGame = new GameStore.Regions.Japan(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    break;
+                case "Korea":
+                    selectedGame = new GameStore.Regions.Korea(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    break;
+                case "Asia":
+                    selectedGame = new GameStore.Regions.Asia(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    break;
+                default:
+                    MessageBox.Show("Invalid region selection.", "Error");
+                    return;
+            }
 
             var selectedGameString = selectedGame.ToString();
 

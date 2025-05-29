@@ -30,15 +30,63 @@ namespace GameStore
             if (isValid())
             {
                 DateTime currentDate = DateTime.Now;
-                Game game = new Game(
-                    currentDate.ToString(),
-                    txtTitle.Text,
-                    txtDeveloper.Text,
-                    txtPublisher.Text,
-                    txtGenre.Text,
-                    txtPlatform.Text,
-                    cboRegion.SelectedItem.ToString(),
-                    decimal.Parse(txtPrice.Text));
+                IGame game;
+                switch (cboRegion.SelectedItem.ToString())
+                {
+                    case "Europe":
+                        game = new GameStore.Regions.Europe(
+                            currentDate.ToString(),
+                            txtTitle.Text,
+                            txtDeveloper.Text,
+                            txtPublisher.Text,
+                            txtGenre.Text,
+                            txtPlatform.Text,
+                            decimal.Parse(txtPrice.Text));
+                        break;
+                    case "North America":
+                        game = new GameStore.Regions.NorthAmerica(
+                            currentDate.ToString(),
+                            txtTitle.Text,
+                            txtDeveloper.Text,
+                            txtPublisher.Text,
+                            txtGenre.Text,
+                            txtPlatform.Text,
+                            decimal.Parse(txtPrice.Text));
+                        break;
+                    case "Japan":
+                        game = new GameStore.Regions.Japan(
+                            currentDate.ToString(),
+                            txtTitle.Text,
+                            txtDeveloper.Text,
+                            txtPublisher.Text,
+                            txtGenre.Text,
+                            txtPlatform.Text,
+                            decimal.Parse(txtPrice.Text));
+                        break;
+                    case "Korea":
+                        game = new GameStore.Regions.Korea(
+                            currentDate.ToString(),
+                            txtTitle.Text,
+                            txtDeveloper.Text,
+                            txtPublisher.Text,
+                            txtGenre.Text,
+                            txtPlatform.Text,
+                            decimal.Parse(txtPrice.Text));
+                        break;
+                    case "Asia":
+                        game = new GameStore.Regions.Asia(
+                            currentDate.ToString(),
+                            txtTitle.Text,
+                            txtDeveloper.Text,
+                            txtPublisher.Text,
+                            txtGenre.Text,
+                            txtPlatform.Text,
+                            decimal.Parse(txtPrice.Text));
+                        break;
+                    default:
+                        MessageBox.Show("Unknown region selected.", "Error");
+                        return;
+                }
 
                 GameDB.Save(game);
                 this.DialogResult = DialogResult.OK;

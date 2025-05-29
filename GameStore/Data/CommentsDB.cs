@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GameStore.Data
 {
-    public class CommentsDB
+    public static class CommentsDB
     {
         private static List<Comment> comments = new List<Comment>();
         private static readonly string CommentsFilePath = "../../Data/Comments.txt";
@@ -25,27 +25,27 @@ namespace GameStore.Data
         }
 
         // Get all comments for a specific game
-        public static List<Comment> GetCommentsForGame(Game game)
+        public static List<Comment> GetCommentsForGame(IGame game)
         {
-            // Use a value-based comparison for Game if needed
             return comments.Where(c => AreGamesEqual(c.Game, game)).ToList();
         }
 
         public static List<Comment> GetAllComments()
         {
+            LoadCommentsFromFile();
             return new List<Comment>(comments);
         }
 
         // Helper method to compare games by value (not by reference)
-        public static bool AreGamesEqual(Game g1, Game g2)
+        public static bool AreGamesEqual(IGame g1, IGame g2)
         {
             return g1 != null && g2 != null &&
-                   string.Equals(g1.Title?.Trim(), g2.Title?.Trim(), StringComparison.OrdinalIgnoreCase) &&
-                   string.Equals(g1.Developer?.Trim(), g2.Developer?.Trim(), StringComparison.OrdinalIgnoreCase) &&
-                   string.Equals(g1.Publisher?.Trim(), g2.Publisher?.Trim(), StringComparison.OrdinalIgnoreCase) &&
-                   string.Equals(g1.Genre?.Trim(), g2.Genre?.Trim(), StringComparison.OrdinalIgnoreCase) &&
-                   string.Equals(g1.Platform?.Trim(), g2.Platform?.Trim(), StringComparison.OrdinalIgnoreCase) &&
-                   string.Equals(g1.Region?.Trim(), g2.Region?.Trim(), StringComparison.OrdinalIgnoreCase) &&
+                   g1.Title == g2.Title &&
+                   g1.Developer == g2.Developer &&
+                   g1.Publisher == g2.Publisher &&
+                   g1.Genre == g2.Genre &&
+                   g1.Platform == g2.Platform &&
+                   g1.Region == g2.Region &&
                    g1.Price == g2.Price;
         }
 
@@ -86,27 +86,61 @@ namespace GameStore.Data
                 if (priceIndex == -1 || priceIndex + 1 >= parts.Length)
                     continue;
 
-                // Correct count for Join: (priceIndex - 2)
                 string gameString = string.Join("|", parts, 2, priceIndex - 2) + "|" + parts[priceIndex];
-
-                // The rest is the comment text (may contain '|')
                 string text = string.Join("|", parts, priceIndex + 1, parts.Length - priceIndex - 1);
 
-                Game game;
-                try
-                {
-                    System.Diagnostics.Debug.WriteLine($"Parsing game string: '{gameString}'");
-                    game = Game.Parse(gameString.Trim());
-                }
-                catch (Exception ex)
-                {
-                    System.Diagnostics.Debug.WriteLine($"Failed to parse game string: '{gameString}' - {ex.Message}");
+                // Parse gameString using region classes
+                IGame game = ParseGame(gameString.Trim());
+                if (game == null)
                     continue;
-                }
-                comments.Add(new Comment(username, game, text, datePosted));
 
-                System.Diagnostics.Debug.WriteLine($"Loaded {comments.Count} comments from file.");
+                comments.Add(new Comment(username, game, text, datePosted));
             }
+        }
+
+        // Helper for parsing a game string into a region class
+        private static IGame ParseGame(string gameStr)
+        {
+            var parts = gameStr.Split('|');
+            if (parts.Length != 8)
+                return null;
+
+            string timestamp = parts[0].Trim();
+            string title = GetValue(parts[1]);
+            string developer = GetValue(parts[2]);
+            string publisher = GetValue(parts[3]);
+            string genre = GetValue(parts[4]);
+            string platform = GetValue(parts[5]);
+            string region = GetValue(parts[6]);
+            string priceStr = GetValue(parts[7]).Replace("$", "").Trim();
+
+            decimal price;
+            if (!decimal.TryParse(priceStr, out price))
+                return null;
+
+            switch (region)
+            {
+                case "Europe":
+                    return new GameStore.Regions.Europe(timestamp, title, developer, publisher, genre, platform, price);
+                case "North America":
+                    return new GameStore.Regions.NorthAmerica(timestamp, title, developer, publisher, genre, platform, price);
+                case "Japan":
+                    return new GameStore.Regions.Japan(timestamp, title, developer, publisher, genre, platform, price);
+                case "Korea":
+                    return new GameStore.Regions.Korea(timestamp, title, developer, publisher, genre, platform, price);
+                case "Asia":
+                    return new GameStore.Regions.Asia(timestamp, title, developer, publisher, genre, platform, price);
+                default:
+                    return null;
+            }
+        }
+
+        private static string GetValue(string part)
+        {
+            var idx = part.IndexOf(':');
+            if (idx == -1)
+                return string.Empty;
+            return part.Substring(idx + 1).Trim();
         }
     }
 }

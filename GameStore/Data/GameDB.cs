@@ -18,11 +18,12 @@ namespace GameStore.Data
     {
         const string GamePath = @"../../Data/Games.txt";
 
-        public static void Save(Game game)
+        public static void Save(IGame game)
         {
-            StreamWriter sw = new StreamWriter(new FileStream(GamePath, FileMode.Append, FileAccess.Write));
-            sw.Write(game.ToString() + Environment.NewLine);
-            sw.Close();
+            using (StreamWriter sw = new StreamWriter(new FileStream(GamePath, FileMode.Append, FileAccess.Write)))
+            {
+                sw.Write(game.ToString() + Environment.NewLine);
+            }
         }
     }
 }

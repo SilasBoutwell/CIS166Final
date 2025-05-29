@@ -9,16 +9,16 @@ namespace GameStore
     /// <summary>
     /// Checks if a game matches the target game for deletion.
     /// </summary>
-    public class DeleteGameFilter : IFilter<Game>
+    public class DeleteGameFilter : IFilter<IGame>
     {
-        private readonly Game _target;
+        private readonly IGame _target;
 
-        public DeleteGameFilter(Game target)
+        public DeleteGameFilter(IGame target)
         {
             _target = target;
         }
 
-        public bool IsMatch(Game game)
+        public bool IsMatch(IGame game)
         {
             return
                 string.Equals(game.TimeStamp?.Trim(), _target.TimeStamp?.Trim(), StringComparison.OrdinalIgnoreCase) &&

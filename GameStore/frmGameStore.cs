@@ -23,7 +23,7 @@ namespace GameStore
             cboPriceFilter.SelectedIndex = 0;
         }
 
-        private ItemList<Game> gameList = new ItemList<Game>();
+        private ItemList<IGame> gameList = new ItemList<IGame>();
 
         //Method to update the text box with the game list
         private void UpdateTextBox()
@@ -37,25 +37,24 @@ namespace GameStore
 
         private void LoadGamesFromFile()
         {
-            gameList = new ItemList<Game>();
+            gameList = new ItemList<IGame>();
             string[] games = System.IO.File.ReadAllLines(@"../../Data/Games.txt");
             foreach (var gameStr in games)
             {
                 if (!string.IsNullOrWhiteSpace(gameStr))
                 {
-                    Game game = ParseGame(gameStr);
+                    IGame game = ParseGame(gameStr);
                     if (game == null)
                         MessageBox.Show("Could not parse: " + gameStr);
-                    if(game != null) 
+                    if (game != null)
                         gameList.AddItem(game);
                 }
             }
         }
 
-        private Game ParseGame(string gameStr)
+        private IGame ParseGame(string gameStr)
         {
             var parts = gameStr.Split('|');
-
             if (parts.Length != 8)
                 return null;
 
@@ -72,7 +71,21 @@ namespace GameStore
             if (!decimal.TryParse(priceStr, out price))
                 return null;
 
-            return new Game(timestamp, title, developer, publisher, genre, platform, region, price);
+            switch (region)
+            {
+                case "Europe":
+                    return new GameStore.Regions.Europe(timestamp, title, developer, publisher, genre, platform, price);
+                case "North America":
+                    return new GameStore.Regions.NorthAmerica(timestamp, title, developer, publisher, genre, platform, price);
+                case "Japan":
+                    return new GameStore.Regions.Japan(timestamp, title, developer, publisher, genre, platform, price);
+                case "Korea":
+                    return new GameStore.Regions.Korea(timestamp, title, developer, publisher, genre, platform, price);
+                case "Asia":
+                    return new GameStore.Regions.Asia(timestamp, title, developer, publisher, genre, platform, price);
+                default:
+                    return null;
+            }
         }
 
         private string GetValue(string part)
@@ -101,14 +114,14 @@ namespace GameStore
             Form deteleGame = new frmDeleteGame();
             if (deteleGame.ShowDialog() == DialogResult.OK)
             {
-                Game toDelete = (Game)deteleGame.Tag;
+                IGame toDelete = (IGame)deteleGame.Tag;
                 var deleteFilter = new DeleteGameFilter(toDelete);
 
                 var updatedGames = gameList.GetAllItems()
                     .Where(g => !deleteFilter.IsMatch(g))
                     .ToList();
 
-                gameList = new ItemList<Game>();
+                gameList = new ItemList<IGame>();
                 foreach (var g in updatedGames)
                     gameList.AddItem(g);
 
@@ -134,7 +147,8 @@ namespace GameStore
         {
             this.Close();
         }
-        private string FormatGameForDisplay(Game game)
+
+        private string FormatGameForDisplay(IGame game)
         {
             return game.ToString().Replace("|", Environment.NewLine);
         }
@@ -152,9 +166,9 @@ namespace GameStore
         private void ApplyFilters()
         {
             string selectedPrice = cboPriceFilter.SelectedItem?.ToString();
-            IFilter<Game> priceFilter = new PriceRangeFilter(selectedPrice);
+            IFilter<IGame> priceFilter = new PriceRangeFilter(selectedPrice);
 
-            IEnumerable<Game> filteredGames = gameList.GetAllItems();
+            IEnumerable<IGame> filteredGames = gameList.GetAllItems();
 
             // Apply text filter if present
             if (!string.IsNullOrWhiteSpace(txtFilter.Text))
