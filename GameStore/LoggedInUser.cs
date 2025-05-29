@@ -24,7 +24,7 @@ namespace GameStore
         public static void Login(User user)
         {
             _currentUser = user;
-            SaveLastUser(user?.Username);
+            //SaveLastUser(user?.Username);
         }
 
         // Log out the current user and clear file
@@ -35,11 +35,11 @@ namespace GameStore
         }
 
         // Save the last logged-in username to file
-        private static void SaveLastUser(string username)
-        {
-            if (!string.IsNullOrEmpty(username))
-                File.WriteAllText(LastUserFile, username);
-        }
+        //private static void SaveLastUser(string username)
+        //{
+        //    if (!string.IsNullOrEmpty(username))
+        //        File.WriteAllText(LastUserFile, username);
+        //}
 
         // Clear the last user file
         private static void ClearLastUser()
@@ -49,21 +49,21 @@ namespace GameStore
         }
 
         // Load the last user from file (call this on app startup)
-        public static void TryAutoLogin()
-        {
-            if (File.Exists(LastUserFile))
-            {
-                string username = File.ReadAllText(LastUserFile).Trim();
-                if (!string.IsNullOrEmpty(username))
-                {
-                    var userDb = new GameStore.Data.UserDB();
-                    var user = userDb.GetUserByUsername(username);
-                    if (user != null)
-                    {
-                        _currentUser = user;
-                    }
-                }
-            }
-        }
+        //public static void TryAutoLogin()
+        //{
+        //    if (File.Exists(LastUserFile))
+        //    {
+        //        string username = File.ReadAllText(LastUserFile).Trim();
+        //        if (!string.IsNullOrEmpty(username))
+        //        {
+        //            var userDb = new GameStore.Data.UserDB();
+        //            var user = userDb.GetUserByUsername(username);
+        //            if (user != null)
+        //            {
+        //                _currentUser = user;
+        //            }
+        //        }
+        //    }
+        //}
     }
 }

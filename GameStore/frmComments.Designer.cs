@@ -187,7 +187,7 @@
             // btnExit
             // 
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExit.Location = new System.Drawing.Point(282, 264);
+            this.btnExit.Location = new System.Drawing.Point(282, 276);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(89, 26);
             this.btnExit.TabIndex = 2;
@@ -197,7 +197,7 @@
             // 
             // btnComment
             // 
-            this.btnComment.Location = new System.Drawing.Point(635, 264);
+            this.btnComment.Location = new System.Drawing.Point(702, 276);
             this.btnComment.Name = "btnComment";
             this.btnComment.Size = new System.Drawing.Size(89, 26);
             this.btnComment.TabIndex = 1;
@@ -207,7 +207,7 @@
             // 
             // btnSignOut
             // 
-            this.btnSignOut.Location = new System.Drawing.Point(47, 264);
+            this.btnSignOut.Location = new System.Drawing.Point(47, 276);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.Size = new System.Drawing.Size(89, 26);
             this.btnSignOut.TabIndex = 46;
@@ -217,7 +217,7 @@
             // 
             // btnDeleteAccount
             // 
-            this.btnDeleteAccount.Location = new System.Drawing.Point(142, 264);
+            this.btnDeleteAccount.Location = new System.Drawing.Point(142, 276);
             this.btnDeleteAccount.Name = "btnDeleteAccount";
             this.btnDeleteAccount.Size = new System.Drawing.Size(134, 26);
             this.btnDeleteAccount.TabIndex = 47;
@@ -229,22 +229,22 @@
             // 
             this.pnlComments.Location = new System.Drawing.Point(6, 21);
             this.pnlComments.Name = "pnlComments";
-            this.pnlComments.Size = new System.Drawing.Size(320, 136);
+            this.pnlComments.Size = new System.Drawing.Size(381, 171);
             this.pnlComments.TabIndex = 48;
             // 
             // txtComment
             // 
-            this.txtComment.Location = new System.Drawing.Point(398, 219);
+            this.txtComment.Location = new System.Drawing.Point(398, 248);
             this.txtComment.Name = "txtComment";
-            this.txtComment.Size = new System.Drawing.Size(332, 22);
+            this.txtComment.Size = new System.Drawing.Size(393, 22);
             this.txtComment.TabIndex = 49;
             // 
             // grpComments
             // 
             this.grpComments.Controls.Add(this.pnlComments);
-            this.grpComments.Location = new System.Drawing.Point(398, 49);
+            this.grpComments.Location = new System.Drawing.Point(398, 44);
             this.grpComments.Name = "grpComments";
-            this.grpComments.Size = new System.Drawing.Size(332, 163);
+            this.grpComments.Size = new System.Drawing.Size(393, 198);
             this.grpComments.TabIndex = 50;
             this.grpComments.TabStop = false;
             this.grpComments.Text = "Comments";
@@ -255,7 +255,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
-            this.ClientSize = new System.Drawing.Size(779, 334);
+            this.ClientSize = new System.Drawing.Size(841, 361);
             this.Controls.Add(this.grpComments);
             this.Controls.Add(this.txtComment);
             this.Controls.Add(this.btnDeleteAccount);

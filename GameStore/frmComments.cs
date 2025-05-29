@@ -63,7 +63,7 @@ namespace GameStore
             }
 
             // Load comments for the selected game
-            LoadComments();
+            this.Shown += (s, e) => LoadComments();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -184,6 +184,8 @@ namespace GameStore
                 .ToList();
 
             int y = 10;
+            int boxWidth = (int)(pnlComments.Width * 0.6); // 60% of panel width
+
             foreach (var comment in comments.OrderBy(c => c.DatePosted))
             {
                 string displayText = $"{comment.DatePosted:MM-dd-yyyy HH:mm} {comment.Username}:\n{comment.Text}";
@@ -191,31 +193,43 @@ namespace GameStore
                 Label lbl = new Label();
                 lbl.Text = displayText;
                 lbl.AutoSize = false;
-                lbl.Width = pnlComments.Width - 40;
-                lbl.MaximumSize = new Size(pnlComments.Width - 40, 0);
+                lbl.Width = boxWidth;
+                lbl.MaximumSize = new Size(boxWidth, 0);
                 lbl.TextAlign = ContentAlignment.TopLeft;
-                lbl.BackColor = comment.Username == LoggedInUser.Current.Username ? Color.LightBlue : Color.LightGray;
                 lbl.Padding = new Padding(8);
                 lbl.Font = new Font("Segoe UI", 8);
+
+                bool isCurrentUser = LoggedInUser.Current != null && comment.Username != null &&
+                                     comment.Username == LoggedInUser.Current.Username;
+
+                lbl.BackColor = isCurrentUser ? Color.LightBlue : Color.LightGray;
 
                 // Calculate height for wrapped text
                 lbl.Height = TextRenderer.MeasureText(lbl.Text, lbl.Font, new Size(lbl.Width, int.MaxValue), TextFormatFlags.WordBreak).Height + 16;
 
-                // Align right for current user, left for others
-                if (comment.Username == LoggedInUser.Current.Username)
+                if (isCurrentUser)
                 {
-                    lbl.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+                    // Align all the way to the right
                     lbl.Left = pnlComments.Width - lbl.Width - 20;
+                    lbl.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 }
                 else
                 {
-                    lbl.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+                    // Align all the way to the left
                     lbl.Left = 10;
+                    lbl.Anchor = AnchorStyles.Top | AnchorStyles.Left;
                 }
 
                 lbl.Top = y;
                 pnlComments.Controls.Add(lbl);
                 y += lbl.Height + 10;
+            }
+
+            // Scroll to the bottom after all comments are added
+            if (pnlComments.VerticalScroll.Visible)
+            {
+                pnlComments.VerticalScroll.Value = pnlComments.VerticalScroll.Maximum;
+                pnlComments.PerformLayout();
             }
         }
 
