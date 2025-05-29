@@ -18,7 +18,7 @@ namespace GameStore.Regions
         public string Region { get; set; }
         public decimal Price { get; set; }
 
-        public NorthAmerica(string timestamp, string title, string developer, string publisher, string genre, string platform, decimal price)
+        public NorthAmerica(string timestamp, string title, string developer, string publisher, string genre, string platform, string region, decimal price)
         {
             TimeStamp = timestamp;
             Title = title;

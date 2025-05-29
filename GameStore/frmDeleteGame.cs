@@ -103,19 +103,19 @@ namespace GameStore
             switch (cboRegion.Text.Trim())
             {
                 case "Europe":
-                    game = new Regions.Europe(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    game = new Regions.Europe(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedRegion, selectedPrice);
                     break;
                 case "North America":
-                    game = new Regions.NorthAmerica(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    game = new Regions.NorthAmerica(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedRegion, selectedPrice);
                     break;
                 case "Japan":
-                    game = new Regions.Japan(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    game = new Regions.Japan(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedRegion, selectedPrice);
                     break;
                 case "Korea":
-                    game = new Regions.Korea(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    game = new Regions.Korea(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedRegion, selectedPrice);
                     break;
                 case "Asia":
-                    game = new Regions.Asia(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    game = new Regions.Asia(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedRegion, selectedPrice);
                     break;
                 default:
                     MessageBox.Show("Unknown region", "Error");

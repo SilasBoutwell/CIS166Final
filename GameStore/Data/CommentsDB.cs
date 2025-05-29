@@ -121,15 +121,15 @@ namespace GameStore.Data
             switch (region)
             {
                 case "Europe":
-                    return new GameStore.Regions.Europe(timestamp, title, developer, publisher, genre, platform, price);
+                    return new GameStore.Regions.Europe(timestamp, title, developer, publisher, genre, platform, region, price);
                 case "North America":
-                    return new GameStore.Regions.NorthAmerica(timestamp, title, developer, publisher, genre, platform, price);
+                    return new GameStore.Regions.NorthAmerica(timestamp, title, developer, publisher, genre, platform, region, price);
                 case "Japan":
-                    return new GameStore.Regions.Japan(timestamp, title, developer, publisher, genre, platform, price);
+                    return new GameStore.Regions.Japan(timestamp, title, developer, publisher, genre, platform, region, price);
                 case "Korea":
-                    return new GameStore.Regions.Korea(timestamp, title, developer, publisher, genre, platform, price);
+                    return new GameStore.Regions.Korea(timestamp, title, developer, publisher, genre, platform, region, price);
                 case "Asia":
-                    return new GameStore.Regions.Asia(timestamp, title, developer, publisher, genre, platform, price);
+                    return new GameStore.Regions.Asia(timestamp, title, developer, publisher, genre, platform, region, price);
                 default:
                     return null;
             }

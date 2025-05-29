@@ -157,19 +157,19 @@ namespace GameStore
             switch (cboRegion.Text.Trim())
             {
                 case "Europe":
-                    selectedGame = new GameStore.Regions.Europe(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    selectedGame = new GameStore.Regions.Europe(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedRegion, selectedPrice);
                     break;
                 case "North America":
-                    selectedGame = new GameStore.Regions.NorthAmerica(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    selectedGame = new GameStore.Regions.NorthAmerica(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedRegion, selectedPrice);
                     break;
                 case "Japan":
-                    selectedGame = new GameStore.Regions.Japan(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    selectedGame = new GameStore.Regions.Japan(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedRegion, selectedPrice);
                     break;
                 case "Korea":
-                    selectedGame = new GameStore.Regions.Korea(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    selectedGame = new GameStore.Regions.Korea(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedRegion, selectedPrice);
                     break;
                 case "Asia":
-                    selectedGame = new GameStore.Regions.Asia(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    selectedGame = new GameStore.Regions.Asia(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedRegion, selectedPrice);
                     break;
                 default:
                     MessageBox.Show("Invalid region selection.", "Error");
@@ -283,19 +283,19 @@ namespace GameStore
             switch (cboRegion.Text.Trim())
             {
                 case "Europe":
-                    selectedGame = new GameStore.Regions.Europe(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    selectedGame = new GameStore.Regions.Europe(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedRegion, selectedPrice);
                     break;
                 case "North America":
-                    selectedGame = new GameStore.Regions.NorthAmerica(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    selectedGame = new GameStore.Regions.NorthAmerica(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedRegion, selectedPrice);
                     break;
                 case "Japan":
-                    selectedGame = new GameStore.Regions.Japan(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    selectedGame = new GameStore.Regions.Japan(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedRegion, selectedPrice);
                     break;
                 case "Korea":
-                    selectedGame = new GameStore.Regions.Korea(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    selectedGame = new GameStore.Regions.Korea(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedRegion, selectedPrice);
                     break;
                 case "Asia":
-                    selectedGame = new GameStore.Regions.Asia(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedPrice);
+                    selectedGame = new GameStore.Regions.Asia(timeStamp, selectedTitle, selectedDeveloper, selectedPublisher, selectedGenre, selectedPlatform, selectedRegion, selectedPrice);
                     break;
                 default:
                     MessageBox.Show("Invalid region selection.", "Error");

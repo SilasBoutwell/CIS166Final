@@ -41,6 +41,7 @@ namespace GameStore
                             txtPublisher.Text,
                             txtGenre.Text,
                             txtPlatform.Text,
+                            cboRegion.Text,
                             decimal.Parse(txtPrice.Text));
                         break;
                     case "North America":
@@ -51,6 +52,7 @@ namespace GameStore
                             txtPublisher.Text,
                             txtGenre.Text,
                             txtPlatform.Text,
+                            cboRegion.Text,
                             decimal.Parse(txtPrice.Text));
                         break;
                     case "Japan":
@@ -61,6 +63,7 @@ namespace GameStore
                             txtPublisher.Text,
                             txtGenre.Text,
                             txtPlatform.Text,
+                            cboRegion.Text,
                             decimal.Parse(txtPrice.Text));
                         break;
                     case "Korea":
@@ -71,6 +74,7 @@ namespace GameStore
                             txtPublisher.Text,
                             txtGenre.Text,
                             txtPlatform.Text,
+                            cboRegion.Text,
                             decimal.Parse(txtPrice.Text));
                         break;
                     case "Asia":
@@ -81,6 +85,7 @@ namespace GameStore
                             txtPublisher.Text,
                             txtGenre.Text,
                             txtPlatform.Text,
+                            cboRegion.Text,
                             decimal.Parse(txtPrice.Text));
                         break;
                     default:
@@ -88,7 +93,8 @@ namespace GameStore
                         return;
                 }
 
-                GameDB.Save(game);
+                var gameDB = GameDBFactory.CreateUniversalGameDB(@"../../Data/Games.txt");
+                gameDB.Save(game);
                 this.DialogResult = DialogResult.OK;
             }
         }
