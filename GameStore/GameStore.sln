@@ -5,9 +5,9 @@ VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStore", "GameStore.csproj", "{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationLibrary", "..\..\ValidationLibrary\ValidationLibrary.csproj", "{4D30C2BA-466A-4AC8-A5FF-01292088377C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationLibrary", "..\..\..\..\..\Downloads\CIS166Final-main\CIS166Final-main\ValidationLibrary\ValidationLibrary.csproj", "{4D30C2BA-466A-4AC8-A5FF-01292088377C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationLibraryTest", "..\..\ValidationLibraryTest\ValidationLibraryTest.csproj", "{74D4EAAE-B421-4547-9758-E8EB4809E609}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationLibraryTest", "..\..\..\..\..\Downloads\CIS166Final-main\CIS166Final-main\ValidationLibraryTest\ValidationLibraryTest.csproj", "{74D4EAAE-B421-4547-9758-E8EB4809E609}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

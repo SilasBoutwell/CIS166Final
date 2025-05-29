@@ -138,7 +138,7 @@
     <Content Include="Data\Users.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ValidationLibrary\ValidationLibrary.csproj">
+    <ProjectReference Include="..\..\..\..\..\Downloads\CIS166Final-main\CIS166Final-main\ValidationLibrary\ValidationLibrary.csproj">
       <Project>{4d30c2ba-466a-4ac8-a5ff-01292088377c}</Project>
       <Name>ValidationLibrary</Name>
     </ProjectReference>
