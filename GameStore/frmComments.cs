@@ -83,16 +83,37 @@ namespace GameStore
         {
             if (MessageBox.Show("Are you sure you want to delete your account?", "Delete Account", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                UserDB.DeleteUser(LoggedInUser.Current.Username);
-                LoggedInUser.Logout();
-                MessageBox.Show("Your account has been deleted.");
-                this.Close();
+                string inputPassword = Microsoft.VisualBasic.Interaction.InputBox("Please enter your password to confirm account deletion:", "Confirm Account Deletion", "", -1, -1);
+                if (string.IsNullOrEmpty(inputPassword))
+                {
+                    return;
+                }
+                else if (!User.VerifyPassword(inputPassword, LoggedInUser.Current.Password))
+                {
+                    MessageBox.Show("Incorrect password. Account deletion cancelled.");
+                    LoggedInUser.Logout();
+                    this.Close();
+                }
+                else
+                {
+                    UserDB.DeleteUser(LoggedInUser.Current.Username);
+                    LoggedInUser.Logout();
+                    MessageBox.Show("Your account has been deleted.");
+                    this.Close();
+                }
             }
         }
 
         private void LoadComments()
         {
             pnlComments.Controls.Clear();
+
+            var allGames = GameStore.Data.GameDBFactory.CreateUniversalGameDB("../../Data/Games.txt").GetAllGames();
+            string[] game = null;
+            foreach (var g in allGames)
+            {
+                game.Append(g.ToString());
+            }
 
             string[] games = System.IO.File.ReadAllText("../../Data/Games.txt").Split('\n');
             string timeStamp = null;

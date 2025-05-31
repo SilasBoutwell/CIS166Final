@@ -127,6 +127,7 @@ namespace GameStore
 
                 System.IO.File.WriteAllLines(@"../../Data/Games.txt", updatedGames.Select(g => g.ToString()));
 
+                GameStore.Data.CommentsDB.DeleteCommentsForGame(toDelete);
                 LoadGamesFromFile();
                 UpdateTextBox();
                 MessageBox.Show("Game deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -199,10 +200,7 @@ namespace GameStore
                     return; // Do not proceed if the user is not logged in
                 }
 
-                if (comments.ShowDialog() == DialogResult.OK)
-                {
-                    // Handle any actions after comments are submitted, if necessary
-                }
+                comments.ShowDialog();
             }
         }
     }

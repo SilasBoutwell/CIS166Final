@@ -55,62 +55,6 @@ namespace GameStore.Data
 
     public static class GameDBFactory
     {
-        public static GameDB<IGame> CreateEuropeGameDB(string gamePath)
-        {
-            Func<string, IGame> parseEurope = line =>
-            {
-                var parts = line.Split('|');
-                if (parts.Length != 8) return null;
-                return new Regions.Europe(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], decimal.TryParse(parts[7], out var price) ? price : 0);
-            };
-            return new GameDB<IGame>(gamePath, parseEurope);
-        }
-
-        public static GameDB<IGame> CreateNorthAmericaGameDB(string gamePath)
-        {
-            Func<string, IGame> parseNA = line =>
-            {
-                var parts = line.Split('|');
-                if (parts.Length != 8) return null;
-                return new Regions.NorthAmerica(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], decimal.TryParse(parts[7], out var price) ? price : 0);
-            };
-            return new GameDB<IGame>(gamePath, parseNA);
-        }
-
-        public static GameDB<IGame> CreateJapanGameDB(string gamePath)
-        {
-            Func<string, IGame> parseJapan = line =>
-            {
-                var parts = line.Split('|');
-                if (parts.Length != 8) return null;
-                return new Regions.Japan(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], decimal.TryParse(parts[7], out var price) ? price : 0);
-            };
-            return new GameDB<IGame>(gamePath, parseJapan);
-        }
-
-        public static GameDB<IGame> CreateKoreaGameDB(string gamePath)
-        {
-            Func<string, IGame> parseKorea = line =>
-            {
-                var parts = line.Split('|');
-                if (parts.Length != 8) return null;
-                return new Regions.Korea(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], decimal.TryParse(parts[7], out var price) ? price : 0);
-            };
-            return new GameDB<IGame>(gamePath, parseKorea);
-        }
-
-        public static GameDB<IGame> CreateAsiaGameDB(string gamePath)
-        {
-            Func<string, IGame> parseAsia = line =>
-            {
-                var parts = line.Split('|');
-                if (parts.Length != 8) return null;
-                return new Regions.Asia(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], decimal.TryParse(parts[7], out var price) ? price : 0);
-            };
-            return new GameDB<IGame>(gamePath, parseAsia);
-        }
-
-        // Optional: A universal factory that parses by region
         public static GameDB<IGame> CreateUniversalGameDB(string gamePath)
         {
             Func<string, IGame> parseAny = line =>

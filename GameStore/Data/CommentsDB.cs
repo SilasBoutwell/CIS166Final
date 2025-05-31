@@ -24,11 +24,18 @@ namespace GameStore.Data
             SaveCommentsToFile();
         }
 
-        // Get all comments for a specific game
-        public static List<Comment> GetCommentsForGame(IGame game)
+        // Remove a comment from the database
+        public static void DeleteCommentsForGame(IGame game)
         {
-            return comments.Where(c => AreGamesEqual(c.Game, game)).ToList();
+            comments = comments.Where(c => !AreGamesEqual(c.Game, game)).ToList();
+            SaveCommentsToFile();
         }
+
+        // Get all comments for a specific game
+        //public static List<Comment> GetCommentsForGame(IGame game)
+        //{
+        //    return comments.Where(c => AreGamesEqual(c.Game, game)).ToList();
+        //}
 
         public static List<Comment> GetAllComments()
         {
