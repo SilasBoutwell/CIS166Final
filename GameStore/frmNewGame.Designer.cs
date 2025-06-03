@@ -194,6 +194,7 @@
             this.AcceptButton = this.btnAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(323, 300);
             this.Controls.Add(this.txtPrice);
