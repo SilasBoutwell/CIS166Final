@@ -1,8 +1,10 @@
-﻿using System;
+﻿using GameStore.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -137,6 +139,11 @@ namespace GameStore
         //Event handler to view all games and clear filters
         private void btnViewAll_Click(object sender, EventArgs e)
         {
+            isPaginated = false;
+            btnNext.Visible = false;
+            btnPrevious.Visible = false;
+            txtCurrentPage.Visible = false;
+            txtCurrentPage.Text = "";
             txtFilter.Clear();
             cboPriceFilter.SelectedIndex = 0;
             LoadGamesFromFile();
@@ -201,6 +208,73 @@ namespace GameStore
                 }
 
                 comments.ShowDialog();
+            }
+        }
+
+        private int currentPage = 1;
+        private int pageSize = 10;
+        private int totalGames = 0;
+        private int totalPages = 0;
+        private bool isPaginated = false;
+
+        private void btnPaginate_Click(object sender, EventArgs e)
+        {
+            if (isPaginated)
+            {
+                isPaginated = false;
+                btnNext.Visible = false;
+                btnPrevious.Visible = false;
+                txtCurrentPage.Visible = false;
+                txtCurrentPage.Text = "";
+                UpdateTextBox(); 
+            }
+            else
+            {
+                isPaginated = true;
+                currentPage = 1;
+                btnNext.Visible = true;
+                btnPrevious.Visible = true;
+                txtCurrentPage.Visible = true;
+                LoadGamesPage();
+            }
+        }
+
+        private void LoadGamesPage()
+        {
+            var allGames = gameList.GetAllItems();
+            totalGames = allGames.Count;
+            totalPages = (int)Math.Ceiling((double)totalGames / pageSize);
+
+            var gamesToShow = allGames
+                .Skip((currentPage - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+
+            rchGameInventory.Clear();
+            foreach (var game in gamesToShow)
+            {
+                rchGameInventory.AppendText(FormatGameForDisplay(game) + Environment.NewLine + Environment.NewLine);
+            }
+
+            // Display current page info
+            txtCurrentPage.Text = $"Page {currentPage} of {Math.Max(totalPages, 1)}";
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (currentPage < totalPages)
+            {
+                currentPage++;
+                LoadGamesPage();
+            }
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            if (currentPage > 1)
+            {
+                currentPage--;
+                LoadGamesPage();
             }
         }
     }

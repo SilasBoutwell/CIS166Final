@@ -37,6 +37,10 @@
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.cboPriceFilter = new System.Windows.Forms.ComboBox();
             this.btnComments = new System.Windows.Forms.Button();
+            this.btnPaginate = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnPrevious = new System.Windows.Forms.Button();
+            this.txtCurrentPage = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // rchGameInventory
@@ -54,14 +58,14 @@
             this.btnExit.Location = new System.Drawing.Point(426, 302);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(83, 27);
-            this.btnExit.TabIndex = 4;
+            this.btnExit.TabIndex = 5;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(426, 150);
+            this.btnAdd.Location = new System.Drawing.Point(426, 127);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(83, 27);
             this.btnAdd.TabIndex = 0;
@@ -80,20 +84,20 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(426, 226);
+            this.btnDelete.Location = new System.Drawing.Point(426, 162);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(83, 27);
-            this.btnDelete.TabIndex = 2;
+            this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnViewAll
             // 
-            this.btnViewAll.Location = new System.Drawing.Point(426, 188);
+            this.btnViewAll.Location = new System.Drawing.Point(426, 197);
             this.btnViewAll.Name = "btnViewAll";
             this.btnViewAll.Size = new System.Drawing.Size(83, 27);
-            this.btnViewAll.TabIndex = 1;
+            this.btnViewAll.TabIndex = 2;
             this.btnViewAll.Text = "View All";
             this.btnViewAll.UseVisualStyleBackColor = true;
             this.btnViewAll.Click += new System.EventHandler(this.btnViewAll_Click);
@@ -103,7 +107,7 @@
             this.txtFilter.Location = new System.Drawing.Point(93, 45);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(171, 22);
-            this.txtFilter.TabIndex = 5;
+            this.txtFilter.TabIndex = 6;
             this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
             // 
             // cboPriceFilter
@@ -119,12 +123,12 @@
             this.cboPriceFilter.Location = new System.Drawing.Point(270, 43);
             this.cboPriceFilter.Name = "cboPriceFilter";
             this.cboPriceFilter.Size = new System.Drawing.Size(133, 24);
-            this.cboPriceFilter.TabIndex = 6;
+            this.cboPriceFilter.TabIndex = 7;
             this.cboPriceFilter.SelectedIndexChanged += new System.EventHandler(this.cboPriceFilter_SelectedIndexChanged);
             // 
             // btnComments
             // 
-            this.btnComments.Location = new System.Drawing.Point(426, 264);
+            this.btnComments.Location = new System.Drawing.Point(426, 232);
             this.btnComments.Name = "btnComments";
             this.btnComments.Size = new System.Drawing.Size(83, 27);
             this.btnComments.TabIndex = 3;
@@ -132,13 +136,57 @@
             this.btnComments.UseVisualStyleBackColor = true;
             this.btnComments.Click += new System.EventHandler(this.btnComments_Click);
             // 
+            // btnPaginate
+            // 
+            this.btnPaginate.Location = new System.Drawing.Point(426, 267);
+            this.btnPaginate.Name = "btnPaginate";
+            this.btnPaginate.Size = new System.Drawing.Size(83, 27);
+            this.btnPaginate.TabIndex = 4;
+            this.btnPaginate.Text = "Paginate";
+            this.btnPaginate.UseVisualStyleBackColor = true;
+            this.btnPaginate.Click += new System.EventHandler(this.btnPaginate_Click);
+            // 
+            // btnNext
+            // 
+            this.btnNext.Location = new System.Drawing.Point(320, 335);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(83, 27);
+            this.btnNext.TabIndex = 9;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Visible = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnPrevious
+            // 
+            this.btnPrevious.Location = new System.Drawing.Point(131, 335);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(83, 27);
+            this.btnPrevious.TabIndex = 8;
+            this.btnPrevious.Text = "Previous";
+            this.btnPrevious.UseVisualStyleBackColor = true;
+            this.btnPrevious.Visible = false;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            // 
+            // txtCurrentPage
+            // 
+            this.txtCurrentPage.Location = new System.Drawing.Point(220, 337);
+            this.txtCurrentPage.Name = "txtCurrentPage";
+            this.txtCurrentPage.Size = new System.Drawing.Size(94, 22);
+            this.txtCurrentPage.TabIndex = 10;
+            this.txtCurrentPage.Visible = false;
+            // 
             // frmGameStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(555, 371);
+            this.ClientSize = new System.Drawing.Size(555, 379);
+            this.Controls.Add(this.txtCurrentPage);
+            this.Controls.Add(this.btnPrevious);
+            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.btnPaginate);
             this.Controls.Add(this.btnComments);
             this.Controls.Add(this.cboPriceFilter);
             this.Controls.Add(this.txtFilter);
@@ -167,6 +215,10 @@
         private System.Windows.Forms.TextBox txtFilter;
         private System.Windows.Forms.ComboBox cboPriceFilter;
         private System.Windows.Forms.Button btnComments;
+        private System.Windows.Forms.Button btnPaginate;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnPrevious;
+        private System.Windows.Forms.TextBox txtCurrentPage;
     }
 }
 
