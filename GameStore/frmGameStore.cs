@@ -238,7 +238,7 @@ namespace GameStore
         }
 
         private int currentPage = 1;
-        private int pageSize = 1;
+        private int pageSize = 5;
         private int totalGames = 0;
         private int totalPages = 0;
         private bool isPaginated = false;

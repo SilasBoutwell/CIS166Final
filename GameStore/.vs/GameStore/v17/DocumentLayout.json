@@ -3,135 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmgamestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|c:\\users\\silas\\onedrive\\coding\\visualstudio\\cis166\\cis166final\\gamestore\\frmgamestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:frmgamestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmcomments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|c:\\users\\silas\\onedrive\\coding\\visualstudio\\cis166\\cis166final\\gamestore\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|c:\\users\\silas\\onedrive\\coding\\visualstudio\\cis166\\cis166final\\gamestore\\loggedinuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:loggedinuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|c:\\users\\silas\\onedrive\\coding\\visualstudio\\cis166\\cis166final\\gamestore\\frmcomments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:frmcomments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmnewgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:frmnewgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\data\\users.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:data\\users.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\igame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|c:\\users\\silas\\onedrive\\coding\\visualstudio\\cis166\\cis166final\\gamestore\\igame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:igame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{74D4EAAE-B421-4547-9758-E8EB4809E609}|..\\..\\ValidationLibraryTest\\ValidationLibraryTest.csproj|c:\\users\\silas\\onedrive\\coding\\visualstudio\\cis166\\validationlibrarytest\\validatortest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmdeletegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:frmdeletegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmnewgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:frmnewgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmcomments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:frmcomments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmgamestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:frmgamestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmdeletegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:frmdeletegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\properties\\resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:properties\\resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\data\\gamedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:data\\gamedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\data\\comments.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:data\\comments.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\data\\commentsdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:data\\commentsdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\loggedinuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:loggedinuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\regions\\asia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:regions\\asia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\regions\\europe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:regions\\europe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\regions\\northamerica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:regions\\northamerica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\regions\\korea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:regions\\korea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\regions\\japan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:regions\\japan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\deletegamefilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:deletegamefilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\searchgamefilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:searchgamefilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\pricerangefilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:pricerangefilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\data\\userdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:data\\userdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\gamelist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:gamelist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\ifilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE150DB1-18CB-47B5-91CD-D90E3DEA3884}|GameStore.csproj|solutionrelative:ifilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -141,7 +33,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -153,78 +45,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmGameStore.cs",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmGameStore.cs",
-              "RelativeDocumentMoniker": "frmGameStore.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmGameStore.cs",
-              "RelativeToolTip": "frmGameStore.cs",
-              "ViewState": "AgIAAMkAAAAAAAAAAAAjwN4AAABBAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\User.cs",
+              "RelativeDocumentMoniker": "User.cs",
+              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\User.cs",
+              "RelativeToolTip": "User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T18:13:44.379Z",
+              "WhenOpened": "2025-06-09T22:54:51.593Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frmNewGame.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmNewGame.cs",
-              "RelativeDocumentMoniker": "frmNewGame.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmNewGame.cs [Design]",
-              "RelativeToolTip": "frmNewGame.cs [Design]",
+              "Title": "LoggedInUser.cs",
+              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\LoggedInUser.cs",
+              "RelativeDocumentMoniker": "LoggedInUser.cs",
+              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\LoggedInUser.cs",
+              "RelativeToolTip": "LoggedInUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T05:53:52.711Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmComments.cs",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmComments.cs",
-              "RelativeDocumentMoniker": "frmComments.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmComments.cs",
-              "RelativeToolTip": "frmComments.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAACgAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T02:41:30.941Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "frmDeleteGame.cs",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmDeleteGame.cs",
-              "RelativeDocumentMoniker": "frmDeleteGame.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmDeleteGame.cs",
-              "RelativeToolTip": "frmDeleteGame.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAqwCkAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T14:50:41.863Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "frmNewGame.cs",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmNewGame.cs",
-              "RelativeDocumentMoniker": "frmNewGame.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmNewGame.cs",
-              "RelativeToolTip": "frmNewGame.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAACcAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T14:43:47.801Z",
+              "WhenOpened": "2025-06-09T22:54:16.362Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Users.txt",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Data\\Users.txt",
-              "RelativeDocumentMoniker": "Data\\Users.txt",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Data\\Users.txt",
-              "RelativeToolTip": "Data\\Users.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-05-23T04:32:19.288Z",
+              "Title": "frmComments.cs",
+              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmComments.cs",
+              "RelativeDocumentMoniker": "frmComments.cs",
+              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmComments.cs",
+              "RelativeToolTip": "frmComments.cs",
+              "ViewState": "AgIAAM4AAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T22:53:43.126Z",
               "EditorCaption": ""
             },
             {
@@ -235,9 +90,9 @@
               "RelativeDocumentMoniker": "IGame.cs",
               "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\IGame.cs",
               "RelativeToolTip": "IGame.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T14:38:52.407Z",
+              "WhenOpened": "2025-06-09T22:53:01.677Z",
               "EditorCaption": ""
             },
             {
@@ -248,306 +103,23 @@
               "RelativeDocumentMoniker": "..\\..\\ValidationLibraryTest\\ValidatorTest.cs",
               "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\ValidationLibraryTest\\ValidatorTest.cs",
               "RelativeToolTip": "..\\..\\ValidationLibraryTest\\ValidatorTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T02:31:16.534Z",
+              "WhenOpened": "2025-06-09T22:53:22.592Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T18:36:57.208Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "frmGameStore.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "frmGameStore.cs",
               "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmGameStore.cs",
               "RelativeDocumentMoniker": "frmGameStore.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmGameStore.cs [Design]",
-              "RelativeToolTip": "frmGameStore.cs [Design]",
+              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmGameStore.cs",
+              "RelativeToolTip": "frmGameStore.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAkwDUAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T05:37:46.072Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "frmComments.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmComments.cs",
-              "RelativeDocumentMoniker": "frmComments.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmComments.cs [Design]",
-              "RelativeToolTip": "frmComments.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T05:53:00.477Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "frmLogin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmLogin.cs",
-              "RelativeDocumentMoniker": "frmLogin.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmLogin.cs [Design]",
-              "RelativeToolTip": "frmLogin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T05:53:43.246Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "frmDeleteGame.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmDeleteGame.cs",
-              "RelativeDocumentMoniker": "frmDeleteGame.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\frmDeleteGame.cs [Design]",
-              "RelativeToolTip": "frmDeleteGame.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T05:53:24.221Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Resources.resx",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Properties\\Resources.resx",
-              "RelativeDocumentMoniker": "Properties\\Resources.resx",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Properties\\Resources.resx",
-              "RelativeToolTip": "Properties\\Resources.resx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHcAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-06-03T05:51:37.245Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Resources.resx",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Properties\\Resources.resx",
-              "RelativeDocumentMoniker": "Properties\\Resources.resx",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Properties\\Resources.resx",
-              "RelativeToolTip": "Properties\\Resources.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-06-03T05:49:27.879Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Resources.resx",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Properties\\Resources.resx",
-              "RelativeDocumentMoniker": "Properties\\Resources.resx",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Properties\\Resources.resx",
-              "RelativeToolTip": "Properties\\Resources.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-06-03T05:51:51.755Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\User.cs",
-              "RelativeDocumentMoniker": "User.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\User.cs",
-              "RelativeToolTip": "User.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAADwv1cAAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T18:38:47.211Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Comments.txt",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Data\\Comments.txt",
-              "RelativeDocumentMoniker": "Data\\Comments.txt",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Data\\Comments.txt",
-              "RelativeToolTip": "Data\\Comments.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-05-23T05:13:10.246Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "GameDB.cs",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Data\\GameDB.cs",
-              "RelativeDocumentMoniker": "Data\\GameDB.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Data\\GameDB.cs",
-              "RelativeToolTip": "Data\\GameDB.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAgwDgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T18:48:29.451Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Asia.cs",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Regions\\Asia.cs",
-              "RelativeDocumentMoniker": "Regions\\Asia.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Regions\\Asia.cs",
-              "RelativeToolTip": "Regions\\Asia.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAACFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T15:21:50.162Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "CommentsDB.cs",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Data\\CommentsDB.cs",
-              "RelativeDocumentMoniker": "Data\\CommentsDB.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Data\\CommentsDB.cs",
-              "RelativeToolTip": "Data\\CommentsDB.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAswCUAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T05:07:59.511Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "LoggedInUser.cs",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\LoggedInUser.cs",
-              "RelativeDocumentMoniker": "LoggedInUser.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\LoggedInUser.cs",
-              "RelativeToolTip": "LoggedInUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T18:38:20.18Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Comment.cs",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Comment.cs",
-              "RelativeDocumentMoniker": "Comment.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Comment.cs",
-              "RelativeToolTip": "Comment.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAvwBkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T05:08:38.959Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Europe.cs",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Regions\\Europe.cs",
-              "RelativeDocumentMoniker": "Regions\\Europe.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Regions\\Europe.cs",
-              "RelativeToolTip": "Regions\\Europe.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA1wBwAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T15:41:51.328Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "NorthAmerica.cs",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Regions\\NorthAmerica.cs",
-              "RelativeDocumentMoniker": "Regions\\NorthAmerica.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Regions\\NorthAmerica.cs",
-              "RelativeToolTip": "Regions\\NorthAmerica.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAswBQAAACNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T15:42:43.813Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Japan.cs",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Regions\\Japan.cs",
-              "RelativeDocumentMoniker": "Regions\\Japan.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Regions\\Japan.cs",
-              "RelativeToolTip": "Regions\\Japan.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA1wBQAAACGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T14:34:01.251Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Korea.cs",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Regions\\Korea.cs",
-              "RelativeDocumentMoniker": "Regions\\Korea.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Regions\\Korea.cs",
-              "RelativeToolTip": "Regions\\Korea.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA7wBQAAACGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T14:34:44.57Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "PriceRangeFilter.cs",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\PriceRangeFilter.cs",
-              "RelativeDocumentMoniker": "PriceRangeFilter.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\PriceRangeFilter.cs",
-              "RelativeToolTip": "PriceRangeFilter.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAApwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T15:06:13.898Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "DeleteGameFilter.cs",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\DeleteGameFilter.cs",
-              "RelativeDocumentMoniker": "DeleteGameFilter.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\DeleteGameFilter.cs",
-              "RelativeToolTip": "DeleteGameFilter.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T15:10:08.981Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "SearchGameFilter.cs",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\SearchGameFilter.cs",
-              "RelativeDocumentMoniker": "SearchGameFilter.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\SearchGameFilter.cs",
-              "RelativeToolTip": "SearchGameFilter.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T15:06:28.99Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "GameList.cs",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\GameList.cs",
-              "RelativeDocumentMoniker": "GameList.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\GameList.cs",
-              "RelativeToolTip": "GameList.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T18:43:09.546Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "IFilter.cs",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\IFilter.cs",
-              "RelativeDocumentMoniker": "IFilter.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\IFilter.cs",
-              "RelativeToolTip": "IFilter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T18:47:19.096Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "UserDB.cs",
-              "DocumentMoniker": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Data\\UserDB.cs",
-              "RelativeDocumentMoniker": "Data\\UserDB.cs",
-              "ToolTip": "C:\\Users\\silas\\OneDrive\\Coding\\VisualStudio\\CIS166\\CIS166Final\\GameStore\\Data\\UserDB.cs",
-              "RelativeToolTip": "Data\\UserDB.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T04:42:19.693Z"
+              "WhenOpened": "2025-06-09T22:52:51.233Z",
+              "EditorCaption": ""
             }
           ]
         }

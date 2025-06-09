@@ -161,7 +161,7 @@
             // 
             // btnPrevious
             // 
-            this.btnPrevious.Location = new System.Drawing.Point(131, 335);
+            this.btnPrevious.Location = new System.Drawing.Point(120, 335);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Size = new System.Drawing.Size(83, 27);
             this.btnPrevious.TabIndex = 8;
@@ -172,10 +172,10 @@
             // 
             // txtCurrentPage
             // 
-            this.txtCurrentPage.Location = new System.Drawing.Point(220, 337);
+            this.txtCurrentPage.Location = new System.Drawing.Point(209, 337);
             this.txtCurrentPage.Name = "txtCurrentPage";
             this.txtCurrentPage.ReadOnly = true;
-            this.txtCurrentPage.Size = new System.Drawing.Size(94, 22);
+            this.txtCurrentPage.Size = new System.Drawing.Size(105, 22);
             this.txtCurrentPage.TabIndex = 10;
             this.txtCurrentPage.Visible = false;
             // 
