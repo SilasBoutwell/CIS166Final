@@ -76,6 +76,8 @@
             // lblFilter
             // 
             this.lblFilter.AutoSize = true;
+            this.lblFilter.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblFilter.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblFilter.Location = new System.Drawing.Point(48, 51);
             this.lblFilter.Name = "lblFilter";
             this.lblFilter.Size = new System.Drawing.Size(39, 16);
@@ -172,6 +174,7 @@
             // 
             this.txtCurrentPage.Location = new System.Drawing.Point(220, 337);
             this.txtCurrentPage.Name = "txtCurrentPage";
+            this.txtCurrentPage.ReadOnly = true;
             this.txtCurrentPage.Size = new System.Drawing.Size(94, 22);
             this.txtCurrentPage.TabIndex = 10;
             this.txtCurrentPage.Visible = false;

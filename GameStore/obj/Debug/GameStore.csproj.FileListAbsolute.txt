@@ -26,4 +26,3 @@ C:\Users\silas\OneDrive\Coding\VisualStudio\CIS166\CIS166Final\GameStore\bin\Deb
 C:\Users\silas\OneDrive\Coding\VisualStudio\CIS166\CIS166Final\GameStore\obj\Debug\GameStore.csproj.Up2Date
 C:\Users\silas\OneDrive\Coding\VisualStudio\CIS166\CIS166Final\GameStore\obj\Debug\GameStore.exe
 C:\Users\silas\OneDrive\Coding\VisualStudio\CIS166\CIS166Final\GameStore\obj\Debug\GameStore.pdb
-C:\Users\silas\OneDrive\Coding\VisualStudio\CIS166\CIS166Final\GameStore\obj\Debug\GameStore.exe.config

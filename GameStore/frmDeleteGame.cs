@@ -15,9 +15,13 @@ namespace GameStore
     /// </summary>
     public partial class frmDeleteGame : Form
     {
+        public bool IsUserLoggedIn { get; private set; } = false;
+
         public frmDeleteGame()
         {
             InitializeComponent();
+
+            // Populate the combo boxes with unique values from the Games.txt file
             string[] games = System.IO.File.ReadAllText("../../Data/Games.txt").ToString().Split('\n');
             foreach (string game in games)
             {
@@ -33,6 +37,27 @@ namespace GameStore
                 }
             }
             cboTitle.SelectedIndex = 0;
+
+
+            // Check if the user is logged in
+            if (!LoggedInUser.IsLoggedIn)
+            {
+                MessageBox.Show("You must log in to delete a game.", "Login Required", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                using (var loginForm = new frmLogin())
+                {
+                    if (loginForm.ShowDialog() == DialogResult.OK && LoggedInUser.IsLoggedIn)
+                    {
+                        IsUserLoggedIn = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("You must log in to delete a game.", "Login Required", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                }
+            }
+            else
+                IsUserLoggedIn = true;
         }
 
         //Event that deletes game

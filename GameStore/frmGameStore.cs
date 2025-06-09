@@ -27,11 +27,13 @@ namespace GameStore
 
         private ItemList<IGame> gameList = new ItemList<IGame>();
 
-        //Method to update the text box with the game list
         private void UpdateTextBox()
         {
             rchGameInventory.Clear();
-            foreach (var game in gameList.GetAllItems())
+
+            // Sort games by TimeStamp descending (newest first)
+            foreach (var game in gameList.GetAllItems()
+                .OrderByDescending(g => DateTime.Parse(g.TimeStamp)))
             {
                 rchGameInventory.AppendText(FormatGameForDisplay(game) + Environment.NewLine + Environment.NewLine);
             }
@@ -101,38 +103,56 @@ namespace GameStore
         //Event handler to add a game
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Form addGame = new frmNewGame();
-            if (addGame.ShowDialog() == DialogResult.OK)
+            using (var addGame = new frmNewGame())
             {
-                LoadGamesFromFile();
-                UpdateTextBox();
-                MessageBox.Show("Game added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (!addGame.IsUserLoggedIn)
+                {
+                    MessageBox.Show("You must be logged in to add a game.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Do not proceed if the user is not logged in
+                }
+
+                Form newGame = new frmNewGame();
+                if (newGame.ShowDialog() == DialogResult.OK)
+                {
+                    LoadGamesFromFile();
+                    UpdateTextBox();
+                    MessageBox.Show("Game added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
         // Event handler to delete game 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            Form deteleGame = new frmDeleteGame();
-            if (deteleGame.ShowDialog() == DialogResult.OK)
+            using (var deleteGame = new frmDeleteGame())
             {
-                IGame toDelete = (IGame)deteleGame.Tag;
-                var deleteFilter = new DeleteGameFilter(toDelete);
+                if (!deleteGame.IsUserLoggedIn)
+                {
+                    MessageBox.Show("You must be logged in to delete a game.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Do not proceed if the user is not logged in
+                }
 
-                var updatedGames = gameList.GetAllItems()
-                    .Where(g => !deleteFilter.IsMatch(g))
-                    .ToList();
+                Form deteleGame = new frmDeleteGame();
+                if (deteleGame.ShowDialog() == DialogResult.OK)
+                {
+                    IGame toDelete = (IGame)deteleGame.Tag;
+                    var deleteFilter = new DeleteGameFilter(toDelete);
 
-                gameList = new ItemList<IGame>();
-                foreach (var g in updatedGames)
-                    gameList.AddItem(g);
+                    var updatedGames = gameList.GetAllItems()
+                        .Where(g => !deleteFilter.IsMatch(g))
+                        .ToList();
 
-                System.IO.File.WriteAllLines(@"../../Data/Games.txt", updatedGames.Select(g => g.ToString()));
+                    gameList = new ItemList<IGame>();
+                    foreach (var g in updatedGames)
+                        gameList.AddItem(g);
 
-                GameStore.Data.CommentsDB.DeleteCommentsForGame(toDelete);
-                LoadGamesFromFile();
-                UpdateTextBox();
-                MessageBox.Show("Game deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    System.IO.File.WriteAllLines(@"../../Data/Games.txt", updatedGames.Select(g => g.ToString()));
+
+                    GameStore.Data.CommentsDB.DeleteCommentsForGame(toDelete);
+                    LoadGamesFromFile();
+                    UpdateTextBox();
+                    MessageBox.Show("Game deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
@@ -173,6 +193,10 @@ namespace GameStore
 
         private void ApplyFilters()
         {
+            isPaginated = false;
+            btnNext.Visible = false;
+            btnPrevious.Visible = false;
+            txtCurrentPage.Visible = false;
             string selectedPrice = cboPriceFilter.SelectedItem?.ToString();
             IFilter<IGame> priceFilter = new PriceRangeFilter(selectedPrice);
 
@@ -190,6 +214,8 @@ namespace GameStore
             {
                 filteredGames = filteredGames.Where(g => priceFilter.IsMatch(g));
             }
+
+            filteredGames = filteredGames.OrderByDescending(g => DateTime.Parse(g.TimeStamp));
 
             rchGameInventory.Clear();
             foreach (var game in filteredGames)
@@ -212,13 +238,16 @@ namespace GameStore
         }
 
         private int currentPage = 1;
-        private int pageSize = 10;
+        private int pageSize = 1;
         private int totalGames = 0;
         private int totalPages = 0;
         private bool isPaginated = false;
 
         private void btnPaginate_Click(object sender, EventArgs e)
         {
+            txtFilter.Clear();
+            cboPriceFilter.SelectedIndex = 0;
+
             if (isPaginated)
             {
                 isPaginated = false;
@@ -241,7 +270,11 @@ namespace GameStore
 
         private void LoadGamesPage()
         {
-            var allGames = gameList.GetAllItems();
+            // Sort games by TimeStamp descending (newest first)
+            var allGames = gameList.GetAllItems()
+                .OrderByDescending(g => DateTime.Parse(g.TimeStamp))
+                .ToList();
+
             totalGames = allGames.Count;
             totalPages = (int)Math.Ceiling((double)totalGames / pageSize);
 

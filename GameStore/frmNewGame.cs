@@ -18,10 +18,32 @@ namespace GameStore
     /// </summary>
     public partial class frmNewGame : Form
     {
+        public bool IsUserLoggedIn { get; private set; } = false;
+
         public frmNewGame()
         {
             InitializeComponent();
             cboRegion.SelectedIndex = 0;
+
+            // Check if the user is logged in
+            if (!LoggedInUser.IsLoggedIn)
+            {
+                MessageBox.Show("You must log in to add a game.", "Login Required", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                using (var loginForm = new frmLogin())
+                {
+                    if (loginForm.ShowDialog() == DialogResult.OK && LoggedInUser.IsLoggedIn)
+                    {
+                        IsUserLoggedIn = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("You must log in to add a game.", "Login Required", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                }
+            }
+            else
+                IsUserLoggedIn = true;
         }
 
         //Event handler to add a game to the main form
